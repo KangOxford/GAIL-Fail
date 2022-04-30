@@ -2,7 +2,7 @@
 When GAIL Fails
 * [Genarative Adversarial Imitation Learning](https://drive.google.com/drive/folders/1dzMWxlfDdd7ISSL54xLWl5W9QcS_5PAe?usp=sharing)
 * Shared documents can be found [here](https://drive.google.com/drive/folders/1oqh0YBPZee6LZ-eDDqUF29NxexmIUDmR?usp=sharing).
-* The link to the [GAIL Lab](https://drive.google.com/drive/folders/1lw-oqXVYCBflGoGWsmuu-2ACDAbJa2IS?usp=sharing)
+* The link to the [GAIL-Lab](https://drive.google.com/drive/folders/1lw-oqXVYCBflGoGWsmuu-2ACDAbJa2IS?usp=sharing)
   * [Colab NoteBook](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing)
 * [Intro](https://drive.google.com/drive/folders/1dzMWxlfDdd7ISSL54xLWl5W9QcS_5PAe?usp=sharing) to Imiation Learning
   * [An ALgrithmic Perspective on Imiation Learning](https://drive.google.com/file/d/1XqoaPp4p8I23-VclvcBv-3BLylM16aun/view?usp=sharing)
