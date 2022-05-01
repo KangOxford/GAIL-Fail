@@ -8,7 +8,7 @@ When GAIL Fails
   * [An Algrithmic Perspective on Imiation Learning](https://drive.google.com/file/d/1XqoaPp4p8I23-VclvcBv-3BLylM16aun/view?usp=sharing)
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
-* **An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)
+* ~~**An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)~~
   * **Solved**
     * Refer to the new [Colab Notebook](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing) here
     * Here is the new [GAIL_Lab Dictionary](https://drive.google.com/drive/folders/1oDC83U29djewKynQRj4CnuuzyncbImOc?usp=sharing) 
