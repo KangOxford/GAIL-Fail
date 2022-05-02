@@ -9,7 +9,7 @@ When GAIL Fails
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 * `Lab 0, Vanilla GAIL` &rarr; `Lab 1, DPG & DQN` &rarr; `Lab 2, Determine reward function` &rarr; `Lab 3, Non-stationary policy.`
-* ~~**An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)~~
+* ~~`Lab 0` **An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)~~
   * **Solved**
     * `Lab 0` is the original GAIL lab.
     * Refer to the new [Colab Notebook](https://drive.google.com/file/d/1osgXmgahlLzmaG8gsggkMmkUWtgG9F-S/view?usp=sharing) here
