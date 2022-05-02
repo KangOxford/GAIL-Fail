@@ -16,6 +16,6 @@ When GAIL Fails
     [![Lab Successfully Running Now](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-01_04-53-47.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
     * Lab Result 
     [![Lab Result](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-02_04-51-23.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
-    * Duration : 1 hour
+    * Duration : 1.5 hour, start from `2022-05-02 02:10:37` and end by `2022-05-02 03:34:39`. 
 * [Week1 Slides](https://www.overleaf.com/5346254815htstspxcpchc)
 [![Week1 Slides](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-04-30_14-56-13.png?raw=true)](https://drive.google.com/file/d/1gg4eMApZ8NNAHndkfC_k4SHMzqTcQz3r/view?usp=sharing)
