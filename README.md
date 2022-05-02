@@ -19,5 +19,13 @@ When GAIL Fails
     * `Lab 0` Result 
     [![Lab Result](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-02_04-51-23.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
     * Duration : `1.5 hour`, start from `2022-05-02 02:10:37` and end by `2022-05-02 03:34:39`. 
+* `Lab 1` Next Step `#TODO`:
+  * Replace the `TRPO` in `/gail/main` with `DPG & DQN` (line 90 ~ 93) 
+  ```python
+    normalizers = Normalizers(dim_action=dim_action, dim_state=dim_state)
+    policy = GaussianMLPPolicy(dim_state, dim_action, FLAGS.TRPO.policy_hidden_sizes, normalizer=normalizers.state)
+    vfn = MLPVFunction(dim_state, FLAGS.TRPO.vf_hidden_sizes, normalizers.state)
+    algo = TRPO(vfn=vfn, policy=policy, dim_state=dim_state, dim_action=dim_action, **FLAGS.TRPO.algo.as_dict())
+  ```
 * [Week1 Slides](https://www.overleaf.com/5346254815htstspxcpchc)
 [![Week1 Slides](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-04-30_14-56-13.png?raw=true)](https://drive.google.com/file/d/1gg4eMApZ8NNAHndkfC_k4SHMzqTcQz3r/view?usp=sharing)
