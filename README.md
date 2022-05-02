@@ -8,15 +8,16 @@ When GAIL Fails
   * [An Algrithmic Perspective on Imiation Learning](https://drive.google.com/file/d/1XqoaPp4p8I23-VclvcBv-3BLylM16aun/view?usp=sharing)
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
+* `Lab 0, Vanilla GAIL` &rarr; `Lab 1, DPG & DQN` &rarr; `Lab 2, Determine reward function` &rarr; `Lab 3, Non-stationary policy.`
 * ~~**An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)~~
   * **Solved**
-    * Lab 0 is the original GAIL lab.
+    * `Lab 0` is the original GAIL lab.
     * Refer to the new [Colab Notebook](https://drive.google.com/file/d/1osgXmgahlLzmaG8gsggkMmkUWtgG9F-S/view?usp=sharing) here
     * Here is the new [GAIL_Lab Dictionary](https://drive.google.com/drive/folders/1oDC83U29djewKynQRj4CnuuzyncbImOc?usp=sharing) 
-    * Lab 0 Successfully Running Now 
+    * `Lab 0` Successfully Running Now 
     [![Lab Successfully Running Now](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-01_04-53-47.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
-    * Lab 0 Result 
+    * `Lab 0` Result 
     [![Lab Result](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-02_04-51-23.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
-    * Duration : 1.5 hour, start from `2022-05-02 02:10:37` and end by `2022-05-02 03:34:39`. 
+    * Duration : `1.5 hour`, start from `2022-05-02 02:10:37` and end by `2022-05-02 03:34:39`. 
 * [Week1 Slides](https://www.overleaf.com/5346254815htstspxcpchc)
 [![Week1 Slides](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-04-30_14-56-13.png?raw=true)](https://drive.google.com/file/d/1gg4eMApZ8NNAHndkfC_k4SHMzqTcQz3r/view?usp=sharing)
