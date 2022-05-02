@@ -10,11 +10,12 @@ When GAIL Fails
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 * ~~**An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)~~
   * **Solved**
+    * Lab 0 is the original GAIL lab.
     * Refer to the new [Colab Notebook](https://drive.google.com/file/d/1osgXmgahlLzmaG8gsggkMmkUWtgG9F-S/view?usp=sharing) here
     * Here is the new [GAIL_Lab Dictionary](https://drive.google.com/drive/folders/1oDC83U29djewKynQRj4CnuuzyncbImOc?usp=sharing) 
-    * Lab Successfully Running Now 
+    * Lab 0 Successfully Running Now 
     [![Lab Successfully Running Now](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-01_04-53-47.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
-    * Lab Result 
+    * Lab 0 Result 
     [![Lab Result](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-05-02_04-51-23.png?raw=true)](https://colab.research.google.com/drive/1LZDevFUyNxqgKzDm_LhrTqAUHPYYRmri?usp=sharing)
     * Duration : 1.5 hour, start from `2022-05-02 02:10:37` and end by `2022-05-02 03:34:39`. 
 * [Week1 Slides](https://www.overleaf.com/5346254815htstspxcpchc)
