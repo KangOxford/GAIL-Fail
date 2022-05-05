@@ -1,0 +1,2 @@
+2022-05-01 03:36:57.495537 - utils/flags.py:257 - log_dir = logs/gail_w-Walker2d-v2-300-2022-05-01-03-36-57
+2022-05-01 03:38:09.393165 - gail/utils/replay_buffer.py:86 - Load dataset from /root/project/dataset/sac/Walker2d-v2
