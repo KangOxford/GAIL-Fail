@@ -9,12 +9,12 @@ import lunzi.nn as nn
 from lunzi.Logger import logger, log_kvs
 
 
-
+#TODO change this part
 from trpo.policies.gaussian_mlp_policy import GaussianMLPPolicy
 from trpo.v_function.mlp_v_function import MLPVFunction
 from trpo.algos.trpo import TRPO
 from trpo.utils.normalizer import Normalizers
-
+#TODO change this part
 
 from gail.discriminator.discriminator import Discriminator
 from gail.discriminator.linear_reward import LinearReward
@@ -93,9 +93,12 @@ def main():
     set_random_seed(FLAGS.seed)
 
     normalizers = Normalizers(dim_action=dim_action, dim_state=dim_state)
+
+    #TODO change this part
     policy = GaussianMLPPolicy(dim_state, dim_action, FLAGS.TRPO.policy_hidden_sizes, normalizer=normalizers.state)
     vfn = MLPVFunction(dim_state, FLAGS.TRPO.vf_hidden_sizes, normalizers.state)
     algo = TRPO(vfn=vfn, policy=policy, dim_state=dim_state, dim_action=dim_action, **FLAGS.TRPO.algo.as_dict())
+    #TODO change this part
 
     if FLAGS.GAIL.reward_type == 'nn':
         expert_batch = expert_dataset.buffer()
@@ -118,9 +121,11 @@ def main():
         discriminator.build(expert_state, expert_action)
         del expert_batch, expert_state, expert_action
 
+    #TODO change this part
     saver = nn.ModuleDict({'policy': policy, 'vfn': vfn, 'normalizers': normalizers, 'discriminator': discriminator})
     runner = Runner(env, max_steps=env.max_episode_steps, gamma=FLAGS.TRPO.gamma, lambda_=FLAGS.TRPO.lambda_,
                     add_absorbing_state=FLAGS.GAIL.learn_absorbing)
+    #TODO change this part
     print(saver)
 
     max_ent_coef = FLAGS.TRPO.algo.ent_coef
