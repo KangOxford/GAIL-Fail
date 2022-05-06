@@ -30,6 +30,7 @@ When GAIL Fails
     vfn = MLPVFunction(dim_state, FLAGS.TRPO.vf_hidden_sizes, normalizers.state)
     algo = TRPO(vfn=vfn, policy=policy, dim_state=dim_state, dim_action=dim_action, **FLAGS.TRPO.algo.as_dict())
   ```
+* Network architecture can be found in the [GitHub Wiki](https://github.com/KangOxford/GAIL-Fail/wiki)
 * [Week1 Slides](https://www.overleaf.com/5346254815htstspxcpchc)
 [![Week1 Slides](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-04-30_14-56-13.png?raw=true)](https://drive.google.com/file/d/1gg4eMApZ8NNAHndkfC_k4SHMzqTcQz3r/view?usp=sharing)
 
