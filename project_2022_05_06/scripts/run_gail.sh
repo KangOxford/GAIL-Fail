@@ -6,8 +6,9 @@ set -x
 ENV=Walker2d-v2
 NUM_ENV=1
 SEED=200
-BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
+# BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
 # BUF_LOAD=~/project/dataset/sac/${ENV}
+BUF_LOAD=/content/drive/MyDrive/GitHub/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
 VF_HIDDEN_SIZES=100
 D_HIDDEN_SIZES=100
 POLICY_HIDDEN_SIZES=100
@@ -48,8 +49,9 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(uname)" == "Linux" ]; then
   for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
   do
-    BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
+    # BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
     # BUF_LOAD=~/project/dataset/sac/${ENV}
+    BUF_LOAD=/content/drive/MyDrive/GitHub/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
     for SEED in 100 200 300
     do
       python3 -m gail.main -s \
