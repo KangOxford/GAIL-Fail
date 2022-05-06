@@ -38,6 +38,10 @@ When GAIL Fails
 * Week2 Meeting, `4:00PM~4:30PM, May06`, with `Dr. Mingfei Sun`.
   * `#TODO` for next week:
     * revise the lab0, draw a performance figure with all the 6 games.
+      * draw a figure like this
+      ![Figure3](/static/Snipaste_2022-05-06_17-02-00.png)
+      * two figures:`training curve` and `evaluation curve`.
+      * get the figure with x-axis to be the `time step` and y-axis to be the `cumulative rewards`.
     * realize the gail1, with trpo replaced with td3
     * Pay attention to the discriminator, as different discrimimators affect lab performance hugely.
       * some papers add regulization into the discriminator.
