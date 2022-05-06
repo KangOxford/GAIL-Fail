@@ -17,3 +17,9 @@ However, one can run SAC to re-train expert policies (see [scripts/run_sac.sh](s
 ## Usage
 
 The folder of [scripts](scripts) provides all demo running scripts to test algorithms like GAIL, BC, DAgger, FEM, GTAL, and imitating-environments algorithms.
+
+<hr>
+
+## New parts
+
+### adding the folder `gail1` with trpo replaced by `td3`
