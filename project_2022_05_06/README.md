@@ -2,7 +2,7 @@
 
 The code contains the implementation of the BC, GAIL, DAgger, FEM, MWAL, MBRL_BC, MBRL_GAIL.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/11hFPRpW9wBf1i17BSzN7J5nAiEYzyeD7/view?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1leDW3IzeM83R3xgql6o22qQUBVnS9pxO/view?usp=sharing)
 
 ## Requirements
 
