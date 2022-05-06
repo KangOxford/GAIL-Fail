@@ -1,4 +1,5 @@
 # GAIL-Fail
+## Introduction
 When GAIL Fails
 * [Genarative Adversarial Imitation Learning](https://drive.google.com/drive/folders/1dzMWxlfDdd7ISSL54xLWl5W9QcS_5PAe?usp=sharing)
 * Shared documents can be found [here](https://drive.google.com/drive/folders/1oqh0YBPZee6LZ-eDDqUF29NxexmIUDmR?usp=sharing).
@@ -8,6 +9,8 @@ When GAIL Fails
   * [An Algrithmic Perspective on Imiation Learning](https://drive.google.com/file/d/1XqoaPp4p8I23-VclvcBv-3BLylM16aun/view?usp=sharing)
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
+
+## Week 1
 * `Lab 0, Vanilla GAIL` &rarr; `Lab 1, DPG & DQN` &rarr; `Lab 2, Determine reward function` &rarr; `Lab 3, Non-stationary policy.`
 * ~~`Lab 0` **An** [**error**](https://github.com/KangOxford/GAIL-Fail/blob/main/error) **needs to be fixed while runnning the** [**GAIL-Lab(in clolab)**](https://colab.research.google.com/drive/1kJnkAh6l_mdw0LiR8i378fIdcLdlyXa8?usp=sharing), refer to the [issue#1](https://github.com/KangOxford/GAIL-Fail/issues/1)~~
   * **Solved**
@@ -29,3 +32,13 @@ When GAIL Fails
   ```
 * [Week1 Slides](https://www.overleaf.com/5346254815htstspxcpchc)
 [![Week1 Slides](https://github.com/KangOxford/GAIL-Fail/blob/main/static/Snipaste_2022-04-30_14-56-13.png?raw=true)](https://drive.google.com/file/d/1gg4eMApZ8NNAHndkfC_k4SHMzqTcQz3r/view?usp=sharing)
+
+## Week2
+* Week2 Meeting, `4:00PM~4:30PM, May06`, with `Dr. Mingfei Sun`.
+  * `#TODO` for next week:
+    * revise the lab0, draw a performance figure with all the 6 games.
+    * realize the gail1, with trpo replaced with td3
+    * Pay attention to the discriminator, as different discrimimators affect lab performance hugely.
+      * some papers add regulization into the discriminator.
+    * Perhaps, in the future, we can directly download the sb3 and edit the package source code.
+      * only in need of replacing the discriminator in the TRPO.discriminater.
