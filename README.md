@@ -10,6 +10,10 @@ When GAIL Fails
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 
+## Week3
+* Week3 Meeting, `4:00PM~4:30PM, May13`, with `Dr. Mingfei Sun`.
+* Works on the [**lab1**](https://github.com/KangOxford/GAIL-Fail/tree/main/project_2022_05_06)
+</br> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1leDW3IzeM83R3xgql6o22qQUBVnS9pxO/view?usp=sharing)
 
 ## Week2
 * Week2 Meeting, `4:00PM~4:30PM, May06`, with `Dr. Mingfei Sun`.
