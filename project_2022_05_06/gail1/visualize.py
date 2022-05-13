@@ -15,6 +15,8 @@ from gail.utils.runner import Runner, evaluate
 from sac.policies.actor import Actor
 from utils import FLAGS, get_tf_config
 
+from utils.envs.mujoco.virtual_env import VirtualEnv
+
 
 """Please Download Dataset from (https://github.com/ikostrikov/gail-experts).
 Then run the following cmd to convert the dataset from h5py into a TensorFlow object.
