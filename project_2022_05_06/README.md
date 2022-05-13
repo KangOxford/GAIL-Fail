@@ -23,3 +23,6 @@ The folder of [scripts](scripts) provides all demo running scripts to test algor
 ## New parts
 
 ### adding the folder `gail1` with trpo replaced by `td3`
+
+draw a figure like this
+![Figure3](../static/Snipaste_2022-05-06_17-02-00.png)
