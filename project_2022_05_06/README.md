@@ -8,8 +8,10 @@ The code contains the implementation of the BC, GAIL, DAgger, FEM, MWAL, MBRL_BC
 
 ### adding the folder `gail1` with trpo replaced by `td3`
 
-draw a figure like this
+* Draw a figure like this
 ![Figure3](../static/Snipaste_2022-05-06_17-02-00.png)
+* The figure in the original GAIL
+![Figure4](../static/Snipaste_2022-05-13_07-02-53.png)
 
 <hr>
 
