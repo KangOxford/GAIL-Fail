@@ -1,2 +1,0 @@
-2021-12-22 22:24:07.733354 - project/utils/flags.py:257 - log_dir = logs/gail_w-HalfCheetah-v2-100-2021-12-22-22-24-07
-2021-12-22 22:24:08.929277 - project/gail/utils/replay_buffer.py:86 - Load dataset from dataset/sac/HalfCheetah-v2

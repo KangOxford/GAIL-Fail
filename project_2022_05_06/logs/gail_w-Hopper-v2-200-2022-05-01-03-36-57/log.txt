@@ -1,2 +1,0 @@
-2022-05-01 03:36:57.181123 - utils/flags.py:257 - log_dir = logs/gail_w-Hopper-v2-200-2022-05-01-03-36-57
-2022-05-01 03:38:08.614961 - gail/utils/replay_buffer.py:86 - Load dataset from /root/project/dataset/sac/Hopper-v2
