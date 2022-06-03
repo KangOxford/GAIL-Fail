@@ -10,6 +10,23 @@ When GAIL Fails
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 
+
+## Week6
+* Week6 Meeting, `4:00PM~4:30PM, Jun03`, with `Dr. Mingfei Sun`.
+  * Walker2D-v2 performs the worst in the three tasks, achieving merely 3000 points, with a comparision to the usual points of 4000.
+* #TODO next week
+  * [Walker2D-v2](https://www.gymlibrary.ml/environments/mujoco/walker2d/) choose different `grad` and `regu` combination.
+  * Walker2D and other two task are the easiest three ones. Try the code on the Humanoid, Humanoid-stand and Ant (v2) instad.
+  * As there is no Humanoid, Humanoid-stand expert traj in the dataset. Apply the `sac` to generate these two.
+  * Run the BC on all the tasks as a baseline for later use.
+    * BC has two versions, one is supervised learning based on the loss of mse(mean square error), and the other is likelihood based on the loss of MLE, which assumes the Gaussian distribution.
+  * On how to adjust the hyper-parameter: normally on hand, but it makes no difference if you want to choose some AutoRL libs such as Hydra. 
+ 
+ 
+## Week5
+* Week5 plot the accumulative rewards
+![result](https://user-images.githubusercontent.com/37290277/171900591-81f3a088-f99e-4276-81fb-6cbfb3a66ae0.png)
+
 ## Week3
 * Week3 Meeting, `4:00PM~4:30PM, May13`, with `Dr. Mingfei Sun`.
 * Works on the [**lab1**](https://github.com/KangOxford/GAIL-Fail/tree/main/project_2022_05_06)
