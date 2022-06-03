@@ -15,12 +15,16 @@ When GAIL Fails
 * Week6 Meeting, `4:00PM~4:30PM, Jun03`, with `Dr. Mingfei Sun`.
   * Walker2D-v2 performs the worst in the three tasks, achieving merely 3000 points, with a comparision to the usual points of 4000.
 * #TODO next week
-  * [Walker2D-v2](https://www.gymlibrary.ml/environments/mujoco/walker2d/) choose different `grad` and `regu` combination.
-  * Walker2D and other two task are the easiest three ones. Try the code on the Humanoid, Humanoid-stand and Ant (v2) instad.
-  * As there is no Humanoid, Humanoid-stand expert traj in the dataset. Apply the `sac` to generate these two.
-  * Run the BC on all the tasks as a baseline for later use.
-    * BC has two versions, one is supervised learning based on the loss of mse(mean square error), and the other is likelihood based on the loss of MLE, which assumes the Gaussian distribution.
-  * On how to adjust the hyper-parameter: normally on hand, but it makes no difference if you want to choose some AutoRL libs such as Hydra. 
+  1. [Walker2D-v2](https://www.gymlibrary.ml/environments/mujoco/walker2d/) choose different `grad` and `regu` combination.
+</br>Try to figure out the reason that the Walker2D performs bad, plot the following figures.
+      * TRPO policy entropy(based on gaussian distribution)
+      * Policy loss
+      * discriminator loss
+  3. Walker2D and other two task are the easiest three ones. Try the code on the Humanoid, Humanoid-stand and Ant (v2) instad.
+  4. As there is no Humanoid, Humanoid-stand expert traj in the dataset. Apply the `sac` to generate these two.
+  5. Run the BC on all the tasks as a baseline for later use.
+    1. BC has two versions, one is supervised learning based on the loss of mse(mean square error), and the other is likelihood based on the loss of MLE, which assumes the Gaussian distribution.
+* On how to adjust the hyper-parameter: normally on hand, but it makes no difference if you want to choose some AutoRL libs such as Hydra. 
  
  
 ## Week5
