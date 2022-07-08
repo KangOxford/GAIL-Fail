@@ -10,7 +10,7 @@ When GAIL Fails
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 
-Network Structure
+Network Structure<br>
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/37290277/177979016-52da0f14-d9b8-4f61-bef6-46d1eb1a0c9a.png">
 
 ## Week6
