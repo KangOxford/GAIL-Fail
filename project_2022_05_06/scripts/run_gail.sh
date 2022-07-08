@@ -26,7 +26,9 @@ ROLLOUT_SAMPLES=1000
 TOTAL_TIMESTEPS=3000000
 
 if [ "$(uname)" == "Darwin" ]; then
+  # python3 -m pdb gail.main -s \
   python3 -m gail.main -s \
+  # python3 -m project_2022_05_06.gail.main -s \
     algorithm="gail" \
     seed=${SEED} \
     env.id=${ENV} \
@@ -54,6 +56,7 @@ elif [ "$(uname)" == "Linux" ]; then
     BUF_LOAD=/content/drive/MyDrive/GitHub/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
     for SEED in 100 200 300
     do
+      # python3 -m project_2022_05_06.gail.main -s \
       python3 -m gail.main -s \
         algorithm="gail_w" \
         seed=${SEED} \
