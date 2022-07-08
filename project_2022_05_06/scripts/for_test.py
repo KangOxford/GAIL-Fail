@@ -7,4 +7,5 @@ import numpy as np
 print(np.arange(10))
 # %%
 import subprocess
-process = subprocess.run('./scripts/run_gail.sh', shell=True, check=True)
+subprocess.run('./scripts/run_gail.sh', shell=True, check=True)
+# %%
