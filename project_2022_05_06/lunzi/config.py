@@ -57,9 +57,11 @@ class MetaFLAGS(type):
 
     def freeze(self):
         for key, value in self.__dict__.items():
+            print(">>> freeze : ",key) #
             if not key.startswith('_'):
                 if isinstance(value, MetaFLAGS):
                     value.freeze()
+        print(">>> freeze finished") # 
         self.finalize()
 
     def finalize(self):

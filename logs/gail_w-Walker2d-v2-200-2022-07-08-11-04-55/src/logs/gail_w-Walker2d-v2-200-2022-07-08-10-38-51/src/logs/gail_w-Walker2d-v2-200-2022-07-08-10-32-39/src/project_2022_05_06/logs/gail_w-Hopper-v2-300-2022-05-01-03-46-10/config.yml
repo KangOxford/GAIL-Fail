@@ -1,0 +1,155 @@
+ACER:
+  buffer_size: 50000
+  ent_coef: 0.01
+  gamma: 0.99
+  log_interval: 2000
+  lr: 0.0007
+  lrschedule: constant
+  n_steps: 20
+  q_coef: 0.5
+  replay_ratio: 4
+  replay_start: 10000
+  save_freq: 1000000
+  total_timesteps: 1000000
+  trust_region: true
+BC:
+  batch_size: 128
+  collect_freq: 5000
+  dagger: false
+  eval_freq: 500
+  lr: 0.0003
+  max_iters: 10000
+  n_collect_samples: 1000
+  train_std: true
+GAIL:
+  buf_load: /content/drive/MyDrive/project_2022_05_01/dataset/sac/Hopper-v2
+  d_batch_size: 64
+  d_iters: 1
+  discriminator:
+    ent_coef: 0.001
+    gradient_penalty_coef: 10.0
+    hidden_sizes:
+    - 100
+    - 100
+    l2_regularization_coef: 0.0
+    lr: 0.0003
+    max_grad_norm: null
+    neural_distance: true
+  eval_freq: 1
+  g_iters: 5
+  learn_absorbing: false
+  max_buf_size: 1000000
+  pretrain_iters: 0
+  reward_type: nn
+  save_freq: 100
+  total_timesteps: 3000000
+  train_frac: 0.7
+  traj_limit: 3
+  trajectory_size: 1000
+PPO:
+  algo:
+    clip_range: 0.2
+    ent_coef: 0.0
+    max_grad_norm: 0.5
+    n_opt_epochs: 10
+  eval_freq: 10000
+  gamma: 0.99
+  lambda_: 0.95
+  lr: 0.0003
+  lr_schedule: linear
+  normalization: true
+  policy_hidden_sizes:
+  - 64
+  - 64
+  reward_scale: 1.0
+  rollout_samples: 1000
+  save_freq: 1000000
+  total_timesteps: 1000000
+  vf_hidden_sizes:
+  - 64
+  - 64
+SAC:
+  actor_hidden_sizes:
+  - 256
+  - 256
+  algo:
+    actor_lr: 0.0003
+    actor_update_freq: 1
+    alpha_lr: 0.0003
+    critic_lr: 0.0003
+    gamma: 0.99
+    init_alpha: 1.0
+    learn_alpha: true
+    target_update_freq: 1
+    tau: 0.995
+  batch_size: 256
+  buffer_size: 1000000
+  critic_hidden_sizes:
+  - 256
+  - 256
+  eval_freq: 10000
+  init_random_steps: 10000
+  log_freq: 2000
+  peb: true
+  save_freq: 1000000
+  target_entropy: null
+  total_timesteps: 1000000
+TD3:
+  actor_hidden_sizes:
+  - 256
+  - 256
+  algo:
+    actor_lr: 0.0003
+    critic_lr: 0.0003
+    gamma: 0.99
+    policy_noise: 0.2
+    policy_noise_clip: 0.5
+    policy_update_freq: 2
+    tau: 0.995
+  batch_size: 256
+  buffer_size: 1000000
+  critic_hidden_sizes:
+  - 256
+  - 256
+  eval_freq: 10000
+  explore_noise: 0.1
+  init_random_steps: 10000
+  log_freq: 2000
+  save_freq: 1000000
+  total_timesteps: 1000000
+TRPO:
+  algo:
+    cg_damping: 0.1
+    ent_coef: 0.0
+    max_kl: 0.01
+    n_cg_iters: 10
+    n_vf_iters: 5
+    vf_lr: 0.001
+  eval_freq: 10000
+  gamma: 0.99
+  lambda_: 0.95
+  normalization: true
+  output_diff: false
+  peb: false
+  policy_hidden_sizes:
+  - 100
+  - 100
+  rollout_samples: 1000
+  save_freq: 500000
+  total_timesteps: 1000000
+  vf_hidden_sizes:
+  - 100
+  - 100
+algorithm: gail_w
+ckpt:
+  policy_load: null
+env:
+  env_type: mujoco
+  goal_env: false
+  id: Hopper-v2
+  num_env: 1
+  rescale_action: true
+log_dir: logs/gail_w-Hopper-v2-300-2022-05-01-03-46-10
+message: ''
+run_id: null
+seed: 300
