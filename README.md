@@ -14,7 +14,13 @@ When GAIL Fails
 ![result](https://user-images.githubusercontent.com/37290277/179525821-1693b840-cb10-4782-b7ed-226325c64746.png
 )
 `Ant-v2`
+<hr>
+![image](https://user-images.githubusercontent.com/37290277/179621506-d002c8d0-0476-47d9-b97f-fec864d59b77.png)
+`loss = classify_loss + entropy_loss + grad_penalty + regularization`
 
+![image](https://user-images.githubusercontent.com/37290277/179621723-30ffc772-5a3b-489d-9377-e26d123b60e9.png)
+`loss = classify_loss + entropy_loss + grad_penalty + regularization`
+<hr>
 ## Week7
 Network Structure<br>
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/37290277/177979016-52da0f14-d9b8-4f61-bef6-46d1eb1a0c9a.png">
