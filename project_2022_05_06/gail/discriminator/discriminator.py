@@ -112,7 +112,9 @@ class Discriminator(nn.Module):
             [tf.nn.l2_loss(t) for t in self.classifier.parameters()],
             name='regularization')
 
-        loss = classify_loss + entropy_loss + grad_penalty + regularization
+        loss = classify_loss + entropy_loss + grad_penalty
+        # loss = classify_loss + entropy_loss + grad_penalty + regularization
+        # loss = classify_loss + entropy_loss + grad_penalty + regularization
         return loss, classify_loss, entropy_loss, grad_penalty, regularization, true_logits, fake_logits, true_weight
 
     @nn.make_method(fetch='loss')
