@@ -3,7 +3,7 @@
 set -e
 set -x
 
-ENV=Walker2d-v2
+ENV=Ant-v2
 NUM_ENV=1
 SEED=200
 # BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
@@ -49,7 +49,8 @@ if [ "$(uname)" == "Darwin" ]; then
     TRPO.policy_hidden_sizes=${POLICY_HIDDEN_SIZES} \
     TRPO.algo.ent_coef=${TRPO_ENT_COEF}
 elif [ "$(uname)" == "Linux" ]; then
-  for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
+  # for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
+  for ENV in "Ant-v2"
   do
     # BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
     # BUF_LOAD=~/project/dataset/sac/${ENV}
