@@ -17,6 +17,9 @@ When GAIL Fails
 ![result (5)](https://user-images.githubusercontent.com/37290277/179757110-488ed3f1-cf3b-4138-b5c3-4dccecb17817.png)
 `grad_penalty` loss = classify_loss + entropy_loss + grad_penalty
 
+![image](https://user-images.githubusercontent.com/37290277/179757457-d575e46b-9ca0-4813-92f3-624d640f4478.png)
+`Both`  loss = classify_loss + entropy_loss + grad_penalty + regularization
+
 
 ## Week8
 ![result](https://user-images.githubusercontent.com/37290277/179525821-1693b840-cb10-4782-b7ed-226325c64746.png
