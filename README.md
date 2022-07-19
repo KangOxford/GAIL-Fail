@@ -10,6 +10,14 @@ When GAIL Fails
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 
+## Week9
+![result (3)](https://user-images.githubusercontent.com/37290277/179756710-ae45e213-f471-4a5e-88b4-888d6d095957.png)
+`regularization`  loss = classify_loss + entropy_loss + regularization
+
+![result (5)](https://user-images.githubusercontent.com/37290277/179757110-488ed3f1-cf3b-4138-b5c3-4dccecb17817.png)
+`grad_penalty` loss = classify_loss + entropy_loss + grad_penalty
+
+
 ## Week8
 ![result](https://user-images.githubusercontent.com/37290277/179525821-1693b840-cb10-4782-b7ed-226325c64746.png
 )
