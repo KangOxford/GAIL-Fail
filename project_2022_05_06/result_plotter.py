@@ -39,7 +39,7 @@ def xy_fn(r):
     progress = r.progress
     splits = r.dir.split('-')
     agent_name = splits[0]
-    if agent_name in {'gail','gail_w'}:
+    if agent_name in {'gail','gail_w','sac'}:
         x_name, y_name = 'Evaluate/iter', 'Evaluate/episode_returns'
     else:
         raise NotImplementedError('%s is not supported' % splits[0])
