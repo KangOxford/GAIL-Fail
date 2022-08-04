@@ -105,13 +105,16 @@ class FLAGS(BaseFLAGS):
         actor_hidden_sizes = [256, 256]
         critic_hidden_sizes = [256, 256]
 
-        total_timesteps = int(1e6)
+        total_timesteps = int(3e6)
+        # total_timesteps = int(1e6)
         init_random_steps = int(1e4)
-        buffer_size = int(1e6)
+        # buffer_size = int(1e6)
+        buffer_size = int(3e6)
         batch_size = 256
         target_entropy = None
         eval_freq = int(1e4)
-        save_freq = int(1e6)
+        save_freq = int(3e6)
+        # save_freq = int(1e6)
         log_freq = int(2e3)
         peb = True
 

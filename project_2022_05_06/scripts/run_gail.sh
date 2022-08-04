@@ -3,7 +3,7 @@
 set -e
 set -x
 
-ENV=Walker2d-v2
+ENV=Ant-v2
 NUM_ENV=1
 SEED=200
 # BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
@@ -49,11 +49,12 @@ if [ "$(uname)" == "Darwin" ]; then
     TRPO.policy_hidden_sizes=${POLICY_HIDDEN_SIZES} \
     TRPO.algo.ent_coef=${TRPO_ENT_COEF}
 elif [ "$(uname)" == "Linux" ]; then
-  for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
+  # for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
+  for ENV in "Ant-v2"
   do
     # BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
     # BUF_LOAD=~/project/dataset/sac/${ENV}
-    BUF_LOAD=/content/drive/MyDrive/GitHub/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
+    BUF_LOAD=/content/drive/MyDrive/GitHub-v/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
     for SEED in 100 200 300
     do
       # python3 -m project_2022_05_06.gail.main -s \

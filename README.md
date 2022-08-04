@@ -10,6 +10,33 @@ When GAIL Fails
   * [Introduction to Imiation Learning](https://drive.google.com/file/d/1FJOrce8YYeWBaJocnz-ycWQbfWc_0q_r/view?usp=sharing)
   * [Deep Reinforcement Learning](https://drive.google.com/file/d/1qzlw5vkePg7yjvgjRY0hTjQP02bhvGuC/view?usp=sharing) 
 
+## Week9
+![result (3)](https://user-images.githubusercontent.com/37290277/179756710-ae45e213-f471-4a5e-88b4-888d6d095957.png)
+`regularization`  loss = classify_loss + entropy_loss + regularization
+
+![result (5)](https://user-images.githubusercontent.com/37290277/179757110-488ed3f1-cf3b-4138-b5c3-4dccecb17817.png)
+`grad_penalty` loss = classify_loss + entropy_loss + grad_penalty
+
+![image](https://user-images.githubusercontent.com/37290277/179757457-d575e46b-9ca0-4813-92f3-624d640f4478.png)
+`Both`  loss = classify_loss + entropy_loss + grad_penalty + regularization
+
+
+## Week8
+![result](https://user-images.githubusercontent.com/37290277/179525821-1693b840-cb10-4782-b7ed-226325c64746.png
+)
+`Ant-v2`
+
+<hr>
+
+![image](https://user-images.githubusercontent.com/37290277/179621506-d002c8d0-0476-47d9-b97f-fec864d59b77.png)
+`loss = classify_loss + entropy_loss + grad_penalty + regularization`
+
+![image](https://user-images.githubusercontent.com/37290277/179621723-30ffc772-5a3b-489d-9377-e26d123b60e9.png)
+`loss = classify_loss + entropy_loss + grad_penalty + regularization`
+
+<hr>
+
+## Week7
 Network Structure<br>
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/37290277/177979016-52da0f14-d9b8-4f61-bef6-46d1eb1a0c9a.png">
 
