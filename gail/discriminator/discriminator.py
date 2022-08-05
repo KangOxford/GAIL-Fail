@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 import lunzi.nn as nn
 from lunzi.Logger import logger
-from trpo.utils.normalizer import Normalizers
+from td3.utils.normalizer import Normalizers
 from .binary_classifier import BinaryClassifier
 from typing import List
 

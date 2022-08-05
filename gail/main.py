@@ -10,10 +10,10 @@ from lunzi.Logger import logger, log_kvs
 
 
 #TODO change this part
-from trpo.policies.gaussian_mlp_policy import GaussianMLPPolicy
-from trpo.v_function.mlp_v_function import MLPVFunction
-from trpo.algos.trpo import TRPO
-from trpo.utils.normalizer import Normalizers
+from td3.policies.gaussian_mlp_policy import GaussianMLPPolicy
+from td3.v_function.mlp_v_function import MLPVFunction
+from td3.algos.td3 import TD3
+from td3.utils.normalizer import Normalizers
 #TODO change this part
 
 from gail.discriminator.discriminator import Discriminator
@@ -95,10 +95,9 @@ def main():
     normalizers = Normalizers(dim_action=dim_action, dim_state=dim_state)
 
     #TODO change this part
-    policy = GaussianMLPPolicy(dim_state, dim_action, FLAGS.TRPO.policy_hidden_sizes, normalizer=normalizers.state)
-    vfn = MLPVFunction(dim_state, FLAGS.TRPO.vf_hidden_sizes, normalizers.state)
-    algo = TRPO(vfn=vfn, policy=policy, dim_state=dim_state, dim_action=dim_action, **FLAGS.TRPO.algo.as_dict())
-    # algo = TRPO(vfn=vfn, policy=policy, dim_state=dim_state, dim_action=dim_action, **FLAGS.TRPO.algo.as_dict())
+    policy = GaussianMLPPolicy(dim_state, dim_action, FLAGS.TD3.policy_hidden_sizes, normalizer=normalizers.state)
+    vfn = MLPVFunction(dim_state, FLAGS.TD3.vf_hidden_sizes, normalizers.state)
+    algo = TD3(vfn=vfn, policy=policy, dim_state=dim_state, dim_action=dim_action, **FLAGS.TD3.algo.as_dict())
     #TODO change this part
 
     if FLAGS.GAIL.reward_type == 'nn':
@@ -124,14 +123,14 @@ def main():
 
     #TODO change this part
     saver = nn.ModuleDict({'policy': policy, 'vfn': vfn, 'normalizers': normalizers, 'discriminator': discriminator})
-    runner = Runner(env, max_steps=env.max_episode_steps, gamma=FLAGS.TRPO.gamma, lambda_=FLAGS.TRPO.lambda_,
+    runner = Runner(env, max_steps=env.max_episode_steps, gamma=FLAGS.TD3.gamma, lambda_=FLAGS.TD3.lambda_,
                     add_absorbing_state=FLAGS.GAIL.learn_absorbing)
     #TODO change this part
     print(saver)
 
-    max_ent_coef = FLAGS.TRPO.algo.ent_coef
+    max_ent_coef = FLAGS.TD3.algo.ent_coef
     eval_gamma = 0.999
-    for t in range(0, FLAGS.GAIL.total_timesteps, FLAGS.TRPO.rollout_samples*FLAGS.GAIL.g_iters):
+    for t in range(0, FLAGS.GAIL.total_timesteps, FLAGS.TD3.rollout_samples*FLAGS.GAIL.g_iters):
         time_st = time.time()
         if t % FLAGS.GAIL.eval_freq == 0:
             eval_returns, eval_lengths = evaluate(policy, env_eval)
@@ -146,24 +145,24 @@ def main():
         # Generator
         generator_dataset = None
         for n_update in range(FLAGS.GAIL.g_iters):
-            data, ep_infos = runner.run(policy, FLAGS.TRPO.rollout_samples)
-            if FLAGS.TRPO.normalization:
+            data, ep_infos = runner.run(policy, FLAGS.TD3.rollout_samples)
+            if FLAGS.TD3.normalization:
                 normalizers.state.update(data.state)
                 normalizers.action.update(data.action)
                 normalizers.diff.update(data.next_state - data.state)
             if t == 0 and n_update == 0 and not FLAGS.GAIL.learn_absorbing:
                 data_ = data.copy()
-                data_ = data_.reshape([FLAGS.TRPO.rollout_samples//env.n_envs, env.n_envs])
+                data_ = data_.reshape([FLAGS.TD3.rollout_samples//env.n_envs, env.n_envs])
                 for e in range(env.n_envs):
                     samples = data_[:, e]
                     masks = 1 - (samples.done | samples.timeout)[..., np.newaxis]
                     masks = masks[:-1]
                     assert np.allclose(samples.state[1:] * masks, samples.next_state[:-1] * masks)
-            t += FLAGS.TRPO.rollout_samples
+            t += FLAGS.TD3.rollout_samples
             data.reward = discriminator.get_reward(data.state, data.action)
             advantages, values = runner.compute_advantage(vfn, data)
             train_info = algo.train(max_ent_coef, data, advantages, values)
-            fps = int(FLAGS.TRPO.rollout_samples / (time.time() - time_st))
+            fps = int(FLAGS.TD3.rollout_samples / (time.time() - time_st))
             train_info['reward'] = np.mean(data.reward)
             train_info['fps'] = fps
 
@@ -171,7 +170,7 @@ def main():
             expert_state = np.stack([t.obs for t in expert_batch])
             expert_action = np.stack([t.action for t in expert_batch])
             train_info['mse_loss'] = policy.get_mse_loss(expert_state, expert_action)
-            log_kvs(prefix='TRPO', kvs=dict(
+            log_kvs(prefix='TD3', kvs=dict(
                 iter=t, **train_info
             ))
 
@@ -207,7 +206,7 @@ def main():
                 iter=t, **train_info
             ))
 
-        if t % FLAGS.TRPO.save_freq == 0:
+        if t % FLAGS.TD3.save_freq == 0:
             np.save('{}/stage-{}'.format(FLAGS.log_dir, t), saver.state_dict())
             np.save('{}/final'.format(FLAGS.log_dir), saver.state_dict())
     np.save('{}/final'.format(FLAGS.log_dir), saver.state_dict())
