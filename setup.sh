@@ -8,8 +8,11 @@ sudo apt-get install -y \
     software-properties-common
 
 sudo apt-get install -y patchelf
+
+
+pip install  PyHamcrest==1.9.0
 pip install protobuf==3.20.*
-pip install tensorflow ==1.13.1
+pip install tensorflow==1.13.1
 pip install gym==0.15.6
 pip install free-mujoco-py
 pip install numpy
