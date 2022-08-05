@@ -1,0 +1,80 @@
+2022-08-05 12:35:59.043281 - utils/flags.py:260 - log_dir = logs/gail_w-Ant-v2-100-2022-08-05-12-34-34
+2022-08-05 12:36:00.347853 - gail/utils/replay_buffer.py:86 - Load dataset from /workspace/GAIL-Fail/dataset/sac/Ant-v2
+2022-08-05 12:36:02.607443 - gail/main.py:80 - Expert Reward 4070.095332
+2022-08-05 12:36:02.715748 - gail/main.py:84 - Original dataset size 3000
+2022-08-05 12:36:02.720702 - gail/main.py:86 - Subsampled dataset size 3000
+2022-08-05 12:36:02.720834 - gail/main.py:87 - np random: 864 random : 786
+2022-08-05 12:36:02.721152 - gail/main.py:91 - Sampled obs: 0.0354, acs: -0.0459
+2022-08-05 12:36:03.509235 - lunzi/nn/flat_param.py:17 - Enabling flattening... ['GaussianMLPPolicy_1/log_std:0', 'GaussianMLPPolicy_1/Variable:0', 'GaussianMLPPolicy_1/Variable_1:0', 'GaussianMLPPolicy_1/Variable_2:0', 'GaussianMLPPolicy_1/Variable_3:0', 'GaussianMLPPolicy_1/Variable_4:0', 'GaussianMLPPolicy_1/Variable_5:0']
+2022-08-05 12:36:05.659005 - gail/discriminator/discriminator.py:30 - Use predefined normalization.
+2022-08-05 12:36:05.660798 - gail/discriminator/discriminator.py:33 - Normalizer loc:[[ 6.57785654e-01  9.47473288e-01 -2.19117794e-02 -1.41637191e-01
+   2.41327509e-01 -1.62708357e-01  6.64058506e-01 -5.04970789e-01
+  -5.34117281e-01  1.49354592e-01 -6.93979800e-01  4.66125011e-01
+   5.54298878e-01  4.18425608e+00 -2.72123426e-01 -2.97389226e-03
+   5.46980128e-02 -2.24658456e-02 -2.97487285e-02 -1.10163175e-01
+   4.20587556e-03  1.03724813e-02 -2.04264037e-02  7.23826736e-02
+  -7.79535016e-03  1.65822962e-03  1.86213199e-02  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  8.87130350e-02
+  -6.80284128e-02 -6.62214458e-02  5.81009947e-02 -7.27041671e-03
+   9.27375108e-02  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  5.69573678e-02  5.89232072e-02  1.62900053e-02
+  -5.55793755e-02  1.47131197e-02  5.93333319e-02  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00 -1.48398414e-01
+  -1.27116498e-02  5.09799905e-02  4.84413207e-02 -2.86797080e-02
+   1.48831308e-01  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00 -5.09244855e-03 -8.88925139e-03  4.07147035e-03
+   2.64643575e-03  1.31719513e-03  9.99999978e-03]] 
+ scale:[[0.10038217 0.02975036 0.05683243 0.08269629 0.1120714  0.42721084
+  0.17675936 0.08019576 0.04551525 0.42459542 0.22779518 0.20099343
+  0.13546911 0.9592246  0.82011193 0.973432   1.2727388  2.0668283
+  1.2254533  6.311867   2.492494   1.0943636  0.7592339  6.288586
+  3.57407    1.5957209  1.5894238  0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.2907049  0.2928238  0.29378334
+  0.29754704 0.29176813 0.28997144 0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.23486853 0.23516735 0.23338667
+  0.23599193 0.23522049 0.23624821 0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.35435402 0.3443248  0.37361518
+  0.37567058 0.37041962 0.3547439  0.         0.         0.
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.09461509 0.0976931  0.09573182
+  0.0997695  0.09301171 0.09949706]]
+2022-08-05 12:36:06.652976 - gail/discriminator/discriminator.py:67 - Discriminator uses Wasserstein distance.
+2022-08-05 12:36:06.653202 - gail/discriminator/discriminator.py:68 - [<tf.Variable 'Discriminator_1/BinaryClassifier_1/Variable:0' shape=(119, 100) dtype=float32_ref>, <tf.Variable 'Discriminator_1/BinaryClassifier_1/Variable_1:0' shape=(100,) dtype=float32_ref>, <tf.Variable 'Discriminator_1/BinaryClassifier_1/Variable_2:0' shape=(100, 100) dtype=float32_ref>, <tf.Variable 'Discriminator_1/BinaryClassifier_1/Variable_3:0' shape=(100,) dtype=float32_ref>, <tf.Variable 'Discriminator_1/BinaryClassifier_1/Variable_4:0' shape=(100, 1) dtype=float32_ref>, <tf.Variable 'Discriminator_1/BinaryClassifier_1/Variable_5:0' shape=(1,) dtype=float32_ref>]
+2022-08-05 12:36:06.653300 - gail/discriminator/discriminator.py:69 - Use gradient penalty regularization (coef = 10.000000)
+2022-08-05 12:36:06.808628 - lunzi/nn/module.py:71 - [GaussianMLPPolicy] is making TensorFlow callables, key = [states] => [actions_mean]
+2022-08-05 12:36:39.847109 - gail/main.py:143 - [Evaluate] iter = 0 episode={ returns = 999.7035 lengths = 1000 } discounted_episode={ returns = 630.3964 lengths = 1000 } 
+2022-08-05 12:36:39.847365 - lunzi/nn/module.py:71 - [GaussianMLPPolicy] is making TensorFlow callables, key = [states] => [actions]
+2022-08-05 12:36:41.730189 - lunzi/nn/module.py:71 - [Discriminator] is making TensorFlow callables, key = [fake_states fake_actions] => [scaled_neural_reward]
+2022-08-05 12:36:41.760410 - lunzi/nn/module.py:71 - [MLPVFunction] is making TensorFlow callables, key = [states] => [values]
+2022-08-05 12:36:41.846066 - lunzi/nn/module.py:71 - [TRPO] is making TensorFlow callables, key = [] => [sync_old]
+2022-08-05 12:36:41.866370 - lunzi/nn/module.py:71 - [TRPO] is making TensorFlow callables, key = [states actions advantages ent_coef] => [loss flat_grad dist_std mean_kl dist_mean]
+2022-08-05 12:36:42.063939 - lunzi/nn/module.py:71 - [TRPO] is making TensorFlow callables, key = [states tangents actions] => [hessian_vec_prod]
+2022-08-05 12:36:42.436785 - lunzi/nn/module.py:71 - [FlatParam] is making TensorFlow callables, key = [] => [get_flat]
+2022-08-05 12:36:42.466143 - lunzi/nn/module.py:71 - [FlatParam] is making TensorFlow callables, key = [feed_flat] => [set_flat]
+2022-08-05 12:36:42.535912 - lunzi/nn/module.py:71 - [TRPO] is making TensorFlow callables, key = [states actions advantages ent_coef] => [loss mean_kl]
+2022-08-05 12:36:42.623631 - lunzi/nn/module.py:71 - [TRPO] is making TensorFlow callables, key = [states returns] => [train_vf vf_loss]
+2022-08-05 12:36:42.750818 - lunzi/nn/module.py:71 - [TRPO] is making TensorFlow callables, key = [states returns] => [vf_loss]
+2022-08-05 12:36:42.812152 - lunzi/nn/module.py:71 - [GaussianMLPPolicy] is making TensorFlow callables, key = [states actions_] => [mse_loss]
+2022-08-05 12:36:42.833042 - gail/main.py:175 - [TRPO] iter = 1000 dist_mean = 0.0000 dist_std = 1.0000 vf_loss = 0.4321 grad_norm = 0.3194 nat_grad_norm = 0.6766 cg_residual = 0.0000 step_size = 0.3410 reward = 0.0000 fps = 27 mse_loss = 0.2731 
+2022-08-05 12:36:44.405084 - gail/main.py:175 - [TRPO] iter = 2000 dist_mean = 0.0036 dist_std = 1.0004 vf_loss = 0.5548 grad_norm = 0.3509 nat_grad_norm = 0.7415 cg_residual = 0.0000 step_size = 0.3076 reward = -0.0000 fps = 26 mse_loss = 0.2739 
+2022-08-05 12:36:46.066876 - gail/main.py:175 - [TRPO] iter = 3000 dist_mean = 0.0050 dist_std = 1.0001 vf_loss = 0.8713 grad_norm = 0.3579 nat_grad_norm = 0.7577 cg_residual = 0.0000 step_size = 0.3055 reward = -0.0000 fps = 25 mse_loss = 0.2891 
+2022-08-05 12:36:47.806023 - gail/main.py:175 - [TRPO] iter = 4000 dist_mean = -0.0109 dist_std = 1.0015 vf_loss = 0.8800 grad_norm = 0.3540 nat_grad_norm = 0.7112 cg_residual = 0.0000 step_size = 0.3212 reward = 0.0000 fps = 24 mse_loss = 0.2961 
+2022-08-05 12:36:49.352996 - gail/main.py:175 - [TRPO] iter = 5000 dist_mean = -0.0029 dist_std = 1.0026 vf_loss = 1.1132 grad_norm = 0.3691 nat_grad_norm = 0.8223 cg_residual = 0.0000 step_size = 0.3071 reward = -0.0000 fps = 23 mse_loss = 0.2836 
+2022-08-05 12:36:49.353826 - lunzi/nn/module.py:71 - [Discriminator] is making TensorFlow callables, key = [true_states true_actions fake_states fake_actions true_masks] => [train loss true_logits fake_logits true_prob fake_prob grad_norm grad_penalty regularization]
+2022-08-05 12:36:49.655814 - gail/main.py:202 - [Discriminator] iter = 5000 loss = 977050.2500 grad_norm = 3050514.5000 grad_penalty = 977050.0000 regularization = 0.0000 true_logits = 0.0014 fake_logits = 0.2623 true_prob = 0.5004 fake_prob = 0.5623 

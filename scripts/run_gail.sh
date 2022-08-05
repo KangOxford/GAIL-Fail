@@ -6,7 +6,7 @@ set -x
 ENV=Ant-v2
 NUM_ENV=1
 SEED=200
-BUF_LOAD=/workspaces/GAIL-Fail/dataset/sac/${ENV}
+BUF_LOAD=/workspace/GAIL-Fail/dataset/sac/${ENV}
 VF_HIDDEN_SIZES=100
 D_HIDDEN_SIZES=100
 POLICY_HIDDEN_SIZES=100
@@ -48,7 +48,7 @@ elif [ "$(uname)" == "Linux" ]; then
   # for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
   for ENV in "Ant-v2"
   do
-    BUF_LOAD=/workspaces/GAIL-Fail/dataset/sac/${ENV}
+    BUF_LOAD=/workspace/GAIL-Fail/dataset/sac/${ENV}
     for SEED in 100 200 300
     do
       python3 -m gail.main -s \

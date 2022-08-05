@@ -1,2 +1,0 @@
-2022-08-05 12:24:40.029963 - utils/flags.py:260 - log_dir = logs/gail_w-Ant-v2-100-2022-08-05-12-24-06
-2022-08-05 12:25:58.754207 - gail/utils/replay_buffer.py:86 - Load dataset from /workspaces/GAIL-Fail/dataset/sac/Ant-v2
