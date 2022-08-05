@@ -6,9 +6,7 @@ set -x
 ENV=Ant-v2
 NUM_ENV=1
 SEED=200
-# BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
-# BUF_LOAD=~/project/dataset/sac/${ENV}
-BUF_LOAD=/content/drive/MyDrive/GitHub/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
+BUF_LOAD=/workspaces/GAIL-Fail/dataset/sac/${ENV}
 VF_HIDDEN_SIZES=100
 D_HIDDEN_SIZES=100
 POLICY_HIDDEN_SIZES=100
@@ -28,7 +26,6 @@ TOTAL_TIMESTEPS=3000000
 if [ "$(uname)" == "Darwin" ]; then
   # python3 -m pdb gail.main -s \
   python3 -m gail.main -s \
-  # python3 -m project_2022_05_06.gail.main -s \
     algorithm="gail" \
     seed=${SEED} \
     env.id=${ENV} \
@@ -52,12 +49,9 @@ elif [ "$(uname)" == "Linux" ]; then
   # for ENV in "Walker2d-v2" "HalfCheetah-v2" "Hopper-v2"
   for ENV in "Ant-v2"
   do
-    # BUF_LOAD=/content/drive/MyDrive/project_2022_05_01/dataset/sac/${ENV}
-    # BUF_LOAD=~/project/dataset/sac/${ENV}
-    BUF_LOAD=/content/drive/MyDrive/GitHub-v/GAIL-Fail/project_2022_05_06/dataset/sac/${ENV}
+    BUF_LOAD=/workspaces/GAIL-Fail/dataset/sac/${ENV}
     for SEED in 100 200 300
     do
-      # python3 -m project_2022_05_06.gail.main -s \
       python3 -m gail.main -s \
         algorithm="gail_w" \
         seed=${SEED} \
