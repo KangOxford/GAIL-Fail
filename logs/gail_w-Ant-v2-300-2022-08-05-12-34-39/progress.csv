@@ -1,8 +1,0 @@
-Evaluate/discounted_episode_lengths,Evaluate/discounted_episode_returns,Evaluate/episode_lengths,Evaluate/episode_returns,Evaluate/iter,TRPO/cg_residual,TRPO/dist_mean,TRPO/dist_std,TRPO/fps,TRPO/grad_norm,TRPO/iter,TRPO/mse_loss,TRPO/nat_grad_norm,TRPO/reward,TRPO/step_size,TRPO/vf_loss,Discriminator/fake_logits,Discriminator/fake_prob,Discriminator/grad_norm,Discriminator/grad_penalty,Discriminator/iter,Discriminator/loss,Discriminator/regularization,Discriminator/true_logits,Discriminator/true_prob
-1000,631.7333213253805,1000,998.5879815188233,0,,,,,,,,,,,,,,,,,,,,
-,,,,,6.256217e-07,-9.024219e-06,1.0,34,0.3246019,1000,0.26897126,0.6888232,7.648719474673271e-09,0.3343542153338763,0.50867563,,,,,,,,,
-,,,,,3.382908e-06,-0.0044319737,1.0014325,32,0.31936732,2000,0.26164317,0.68696344,3.4305936424061654e-08,0.34048159866128425,0.83734673,,,,,,,,,
-,,,,,3.8573694e-06,-0.006047797,1.0018346,30,0.37185788,3000,0.27027234,0.75245744,1.99007336050272e-08,0.3090522207093375,2.1295955,,,,,,,,,
-,,,,,7.72533e-06,-0.012958457,0.99678254,29,0.38618633,4000,0.28869098,0.8299474,2.1403311620815656e-08,0.2867442434584927,1.8447174,,,,,,,,,
-,,,,,6.7359315e-06,-0.0053220824,0.9949835,27,0.37128663,5000,0.28489363,0.764528,-2.3419648641720414e-08,0.29890960958638163,2.4768076,,,,,,,,,
-,,,,,,,,,,,,,,,,-1.2489974,0.24847607,3077292.2,860677.2,5000,860676.0,0.0,-0.08271519,0.47968674
