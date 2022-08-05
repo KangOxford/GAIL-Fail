@@ -24,7 +24,6 @@ ROLLOUT_SAMPLES=1000
 TOTAL_TIMESTEPS=3000000
 
 if [ "$(uname)" == "Darwin" ]; then
-  # python3 -m pdb gail.main -s \
   python3 -m gail.main -s \
     algorithm="gail" \
     seed=${SEED} \
