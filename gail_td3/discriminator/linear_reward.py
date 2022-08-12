@@ -1,6 +1,6 @@
 from lunzi.Logger import logger
 import numpy as np
-from trpo.utils.normalizer import GaussianNormalizer
+from td3.utils.normalizer import GaussianNormalizer
 import lunzi.nn as nn
 
 
