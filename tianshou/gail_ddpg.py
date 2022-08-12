@@ -8,7 +8,7 @@ from tianshou.data import Batch, ReplayBuffer, to_numpy, to_torch
 from tianshou.policy import PPOPolicy
 
 
-class GAILPolicy(PPOPolicy):
+class GAILPolicy(DDPGPolicy):
     r"""Implementation of Generative Adversarial Imitation Learning. arXiv:1606.03476.
 
     :param torch.nn.Module actor: the actor network following the rules in
@@ -88,7 +88,7 @@ class GAILPolicy(PPOPolicy):
         super().__init__(
             actor, critic, optim, dist_fn, eps_clip, dual_clip, value_clip,
             advantage_normalization, recompute_advantage, **kwargs
-        )
+        ) ## TODO modify this to fulfill the initialization of ddpg rather than ppo
         self.disc_net = disc_net
         self.disc_optim = disc_optim
         self.disc_update_num = disc_update_num

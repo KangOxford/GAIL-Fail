@@ -1,6 +1,7 @@
 import gym, torch, numpy as np, torch.nn as nn
 import tianshou as ts
 from torch.utils.tensorboard import SummaryWriter
+
 task = 'CartPole-v0'
 lr, epoch, batch_size = 1e-3, 10, 64
 train_num, test_num = 10, 100
@@ -8,7 +9,8 @@ gamma, n_step, target_freq = 0.9, 3, 320
 buffer_size = 20000
 eps_train, eps_test = 0.1, 0.05
 step_per_epoch, step_per_collect = 10000, 10
-logger = ts.utils.TensorboardLogger(SummaryWriter('log/ddpg'))
+
+logger = ts.utils.TensorboardLogger(SummaryWriter('log/dqn'))
 train_envs = ts.env.DummyVectorEnv([lambda: gym.make(task) for _ in range(train_num)])
 test_envs = ts.env.DummyVectorEnv([lambda: gym.make(task) for _ in range(test_num)])
 
@@ -34,6 +36,8 @@ result = ts.trainer.offpolicy_trainer(
     stop_fn=lambda mean_rewards: mean_rewards >= env.spec.reward_threshold,
     logger=logger)
 print(f'Finished training! Use {result["duration"]}')
+
+
 
 torch.save(policy.state_dict(), 'dqn.pth')
 policy.load_state_dict(torch.load('dqn.pth'))
