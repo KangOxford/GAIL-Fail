@@ -1,8 +1,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 import numpy as np
 import gym
-from trpo.policies import BasePolicy
-from trpo.v_function import BaseVFunction
+from td3.policies import BasePolicy
+from td3.v_function import BaseVFunction
 from lunzi.dataset import Dataset
 from .replay_buffer import Mask
 

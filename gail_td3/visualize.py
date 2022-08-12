@@ -7,8 +7,8 @@ import tensorflow as tf
 import numpy as np
 import lunzi.nn as nn
 from lunzi.Logger import logger, log_kvs
-from trpo.policies.gaussian_mlp_policy import GaussianMLPPolicy
-from trpo.utils.normalizer import Normalizers
+from td3.policies.gaussian_mlp_policy import GaussianMLPPolicy
+from td3.utils.normalizer import Normalizers
 # (TimeStep, ReplayBuffer) are required to restore from pickle.
 from gail.utils.replay_buffer import TimeStep, ReplayBuffer, load_expert_dataset
 from gail.utils.runner import Runner, evaluate
@@ -56,7 +56,7 @@ def main():
     dim_action = env.action_space.shape[0]
 
     normalizers = Normalizers(dim_action=dim_action, dim_state=dim_state)
-    policy = GaussianMLPPolicy(dim_state, dim_action, FLAGS.TRPO.policy_hidden_sizes, normalizer=normalizers.state)
+    policy = GaussianMLPPolicy(dim_state, dim_action, FLAGS.TD3.policy_hidden_sizes, normalizer=normalizers.state)
     expert_actor = Actor(dim_state, dim_action, FLAGS.SAC.actor_hidden_sizes)
     tf.get_default_session().run(tf.global_variables_initializer())
 

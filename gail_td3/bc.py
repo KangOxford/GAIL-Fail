@@ -7,8 +7,8 @@ import tensorflow as tf
 import numpy as np
 import lunzi.nn as nn
 from lunzi.Logger import logger, log_kvs
-from trpo.policies.gaussian_mlp_policy import GaussianMLPPolicy
-from trpo.utils.normalizer import Normalizers
+from td3.policies.gaussian_mlp_policy import GaussianMLPPolicy
+from td3.utils.normalizer import Normalizers
 # (TimeStep, ReplayBuffer) are required to restore from pickle.
 from gail.utils.replay_buffer import TimeStep, ReplayBuffer, load_expert_dataset
 from gail.utils.runner import Runner, evaluate
