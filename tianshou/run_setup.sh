@@ -3,8 +3,8 @@ sudo apt-get install -y \
     libgl1-mesa-glx \
     libglew-dev \
     libosmesa6-dev \
-    software-properties-common
-sudo apt-get install -y patchelf
+    software-properties-common \
+    patchelf
 
 pip install --upgrade pip
 pip install free-mujoco-py
