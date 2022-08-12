@@ -6,7 +6,7 @@ sudo apt-get install -y \
     software-properties-common
 sudo apt-get install -y patchelf
 
-pip install opencv-python
+# pip install opencv-python
 pip install PyHamcrest
 pip install protobuf
 pip install tensorflow
