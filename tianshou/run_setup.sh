@@ -18,12 +18,16 @@ pip install free-mujoco-py
 # pip install pyyaml
 # pip install termcolor
 # pip install json_tricks
-
 # pip install ipython
 pip install tianshou
 
+pip install gym[classic_control]
+
 git config --global user.email "kang.li@maths.ox.ac.uk"
 git config --global user.name "KangOxford"
+
+
+# cd /workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/tianshou
 
 
 
