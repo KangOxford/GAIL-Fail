@@ -9,6 +9,7 @@ sudo apt-get install -y \
 
 sudo apt-get install -y patchelf
 
+pip install -U tensorflow-probability==0.6.0
 pip install opencv-python
 pip install PyHamcrest==1.9.0
 pip install protobuf==3.20.*

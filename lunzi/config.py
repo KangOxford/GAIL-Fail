@@ -93,7 +93,8 @@ def parse(cls):
     if args.set:
         for instruction in sum(args.set, []):
             path, *value = instruction.split('=')
-            cls.set_value(path.split('.'), yaml.load('='.join(value)))
+            # cls.set_value(path.split('.'), yaml.load('='.join(value)))
+            cls.set_value(path.split('.'), yaml.safe_load('='.join(value)))
 
     _initialized = True
 
