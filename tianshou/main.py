@@ -37,8 +37,6 @@ result = ts.trainer.offpolicy_trainer(
     logger=logger)
 print(f'Finished training! Use {result["duration"]}')
 
-
-
 torch.save(policy.state_dict(), 'dqn.pth')
 policy.load_state_dict(torch.load('dqn.pth'))
 
@@ -46,6 +44,6 @@ policy.load_state_dict(torch.load('dqn.pth'))
 policy.eval()
 policy.set_eps(eps_test)
 collector = ts.data.Collector(policy, env, exploration_noise=True)
-collector.collect(n_episode=1, render=1 / 35)
+collector.collect(n_episode=1)
 
 
