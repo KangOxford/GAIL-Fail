@@ -19,6 +19,7 @@ sudo apt-get install -y \
 
 conda init bash
 conda activate gail
+ipython
 
 
 # import os
