@@ -8,8 +8,9 @@ sudo apt-get install -y \
     patchelf
 
 pip install --upgrade pip
-pip install tensorflow
+pip install tensorflow==1.14
 pip install gym
 pip install free-mujoco-py
 pip install mpi4py
 pip install stable-baselines[mpi]
+pip install ipython
