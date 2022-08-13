@@ -7,6 +7,7 @@ sudo apt-get install -y \
     software-properties-common \
     patchelf
 
+
 pip install --upgrade pip
 pip install tensorflow==1.14
 pip install gym
