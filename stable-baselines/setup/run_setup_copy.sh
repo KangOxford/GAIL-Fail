@@ -4,9 +4,7 @@ export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_P
 export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mjpro200_linux/bin:$MUJOCO_PY_MUJOCO_PATH
 export PATH=/workspace/anaconda3/bin:$PATH
 
-# export PATH=/workspace/GAIL-Fail/stable-baselines/d2-imitation:$PATH
-# export PATH=/workspace/GAIL-Fail/stable-baselines/d2-imitation/baselines:$PATH
-
+# conda activate gail
 
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
 sudo apt-get install -y \
@@ -17,13 +15,19 @@ sudo apt-get install -y \
     software-properties-common \
     patchelf
 
-conda init bash
-conda activate gail
+pip install --upgrade pip
+pip install cffi
+pip install mujoco-py==1.50.1.68
+pip install gym==0.15.4
+pip install seaborn==0.11.0
+pip install pyquaternion==0.9.5
+pip install joblib==0.13.2
+pip install scikit-learn==0.21.3
+pip install mpi4py==3.0.1
+pip install tqdm==4.55.0
+pip install box2d==2.3.10
+pip install stable-baselines[mpi]
 
 
-# import os
-# os.sys.path.append("/workspace/GAIL-Fail/stable-baselines/d2-imitation")
-
-# pip install hrl-pybullet-envs ## not sure about whether it can make 'import pybullet_envs' work
 
 
