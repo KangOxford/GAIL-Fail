@@ -28,3 +28,4 @@ ipython
 # pip install hrl-pybullet-envs ## not sure about whether it can make 'import pybullet_envs' work
 
 
+# git rm -r --cached .
