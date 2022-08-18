@@ -1,5 +1,7 @@
 # =============================  run on mac  =============================
 if ["$(uname)"=="Darwin"];then
+    brew install llvm boost hdf5
+    brew install openmpi
     brew install gcc
     brew install wget 
     # brew install build-essential 
