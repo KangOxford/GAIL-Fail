@@ -49,7 +49,15 @@ elif ["$uname"=="Colab/Linux"];then
     # git rm -r --cached .
 
 # ============================= run on linux =============================
+<<<<<<< HEAD
 elif ["$(uname)"=="Linux"];then
+=======
+if ["$(uname)"=="Linux"];then
+    wget "https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh"
+    bash Anaconda3-2019.03-Linux-x86_64.sh
+    rm Anaconda3-2019.03-Linux-x86_64.sh
+
+>>>>>>> 12e77d6defe3acc8230ae0f9df8d76b071634e58
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
     sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
