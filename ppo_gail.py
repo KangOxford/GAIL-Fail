@@ -10,6 +10,7 @@ import gym
 import seals
 env_string = "seals/Walker2d-v0"
 env = gym.make(env_string)
+testing = True
 
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
@@ -31,12 +32,15 @@ action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n
 #     verbose=1,
 #     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
 # )
-expert = SAC(policy="MlpPolicy", 
-              env = env, 
-              verbose=1,
-              tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
-expert.learn(1e5,tb_log_name="sac_seal_run") 
-expert.save("debug_sac_seal_expert")
+if not testing:
+    expert = SAC(policy="MlpPolicy", 
+                  env = env, 
+                  verbose=1,
+                  tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
+    expert.learn(1e5,tb_log_name="sac_seal_run") 
+    expert.save("debug_sac_seal_expert")
+else: 
+    expert = SAC.load("debug_sac_seal_expert")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
@@ -61,12 +65,16 @@ from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 
 import gym
 import seals
-venv = DummyVecEnv([lambda: gym.make(env_string)] * 8)
+
+venv = DummyVecEnv([lambda: gym.make(env_string)] * 1) ## version 3
+# venv = gym.make(env_string) ## version 2
+# venv = DummyVecEnv([lambda: gym.make(env_string)] * 8) ## version 1
 
 # %% define the learner
-learner = PPO(
+learner = DDPG(
+    policy="MlpPolicy",
     env=venv,
-    policy=MlpPolicy
+    action_noise=action_noise, 
 )
 reward_net = BasicRewardNet(
     venv.observation_space, venv.action_space, normalize_input_layer=RunningNorm
@@ -88,7 +96,8 @@ learner_rewards_before_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
 # %% training the GAIL 2/2
-gail_trainer.train(int(3e6))  # Note: set to 300000 for better results
+gail_trainer.train(int(1e5))  # Note: set to 300000 for better results
+# gail_trainer.train(int(3e6))  # Note: set to 300000 for better results
 learner_rewards_after_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
@@ -98,8 +107,8 @@ learner_rewards_after_training, _ = evaluate_policy(
 import matplotlib.pyplot as plt
 import numpy as np
 
-print(np.mean(learner_rewards_after_training))
-print(np.mean(learner_rewards_before_training))
+print("np.mean(learner_rewards_after_training) ",np.mean(learner_rewards_after_training))
+print("np.mean(learner_rewards_before_training) ",np.mean(learner_rewards_before_training))
 
 plt.hist(
     [learner_rewards_before_training, learner_rewards_after_training],
