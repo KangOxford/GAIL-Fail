@@ -57,3 +57,11 @@ fi
 
 
 git clone https://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@github.com/KangOxford/GAIL-Fail.git
+
+
+
+
+
+
+!git config --global user.email "kang.li@maths.ox.ac.uk"
+!git config --global user.name "KangOxford"
