@@ -27,7 +27,7 @@ if ["$(uname)"=="Darwin"];then
     export MUJOCO_PY_MUJOCO_PATH=/Users/$USER/.mujoco/mujoco200_macos/bin:$MUJOCO_PY_MUJOCO_PATH
 
 
-# ============================= run on colab/linux =============================
+# ============================= run on colab =============================
 elif ["$uname"=="Linux"];then
     export PATH=/workspace/.mujoco/mjpro150/bin:$PATH
     export PATH=/workspace/.mujoco/mjpro200_linux/bin:$PATH
@@ -55,13 +55,30 @@ elif ["$uname"=="Linux"];then
     # git rm -r --cached .
 fi
 
+# ============================= run on linux =============================
+if ["$(uname)"=="Linux"];then
+    sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
+    sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
-git clone https://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@github.com/KangOxford/GAIL-Fail.git
+    mkdir /home/$USER/.mujoco 
+    wget http://www.roboti.us/download/mjpro150_osx.zip
+    unzip mjpro150_osx.zip -d /home/$USER/.mujoco 
+    rm mjpro150_osx.zip
 
+    wget http://www.roboti.us/download/mujoco200_macos.zip
+    unzip mujoco200_macos.zip -d /home/$USER/.mujoco 
+    rm mujoco200_macos.zip
 
+    wget http://www.roboti.us/file/mjkey.txt
+    cp mjkey.txt /home/$USER/.mujoco/mjkey.txt
+    rm mjkey.txt
 
+    export PATH=/home/$USER/.mujoco/mjpro150/bin:$PATH
+    export PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$PATH
+    export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
+    export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$MUJOCO_PY_MUJOCO_PATH
+fi
 
-
-
-!git config --global user.email "kang.li@maths.ox.ac.uk"
-!git config --global user.name "KangOxford"
+# git clone https://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@github.com/KangOxford/GAIL-Fail.git
+# git config --global user.email "kang.li@maths.ox.ac.uk"
+# git config --global user.name "KangOxford"
