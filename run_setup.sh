@@ -28,7 +28,7 @@ if ["$(uname)"=="Darwin"];then
 
 
 # ============================= run on colab =============================
-elif ["$uname"=="Linux"];then
+elif ["$uname"=="Colab/Linux"];then
     export PATH=/workspace/.mujoco/mjpro150/bin:$PATH
     export PATH=/workspace/.mujoco/mjpro200_linux/bin:$PATH
     export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
@@ -37,13 +37,7 @@ elif ["$uname"=="Linux"];then
     # export PATH=/workspace/GAIL-Fail/stable-baselines/d2-imitation:$PATH
     # export PATH=/workspace/GAIL-Fail/stable-baselines/d2-imitation/baselines:$PATH
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
-    sudo apt-get install -y \
-        libgl1-mesa-dev \
-        libgl1-mesa-glx \
-        libglew-dev \
-        libosmesa6-dev \
-        software-properties-common \
-        patchelf
+    sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
     # conda init bash
     # conda activate gail
@@ -53,10 +47,9 @@ elif ["$uname"=="Linux"];then
     # os.sys.path.append("/workspace/GAIL-Fail/stable-baselines/d2-imitation")
     # pip install hrl-pybullet-envs ## not sure about whether it can make 'import pybullet_envs' work
     # git rm -r --cached .
-fi
 
 # ============================= run on linux =============================
-if ["$(uname)"=="Linux"];then
+elif ["$(uname)"=="Linux"];then
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
     sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
@@ -77,6 +70,11 @@ if ["$(uname)"=="Linux"];then
     export PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$PATH
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$MUJOCO_PY_MUJOCO_PATH
+
+
+    sudo apt install python-pip
+    pip install gym
+    pip install stable-baselines3
 fi
 
 # git clone https://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@github.com/KangOxford/GAIL-Fail.git
