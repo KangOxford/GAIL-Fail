@@ -27,7 +27,7 @@ if ["$(uname)"=="Darwin"];then
     export MUJOCO_PY_MUJOCO_PATH=/Users/$USER/.mujoco/mujoco200_macos/bin:$MUJOCO_PY_MUJOCO_PATH
 
 
-# ============================= run on colab =============================
+# ============================= run on colab/linux =============================
 elif ["$uname"=="Linux"];then
     export PATH=/workspace/.mujoco/mjpro150/bin:$PATH
     export PATH=/workspace/.mujoco/mjpro200_linux/bin:$PATH
@@ -54,3 +54,6 @@ elif ["$uname"=="Linux"];then
     # pip install hrl-pybullet-envs ## not sure about whether it can make 'import pybullet_envs' work
     # git rm -r --cached .
 fi
+
+
+git clone https://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@github.com/KangOxford/GAIL-Fail.git
