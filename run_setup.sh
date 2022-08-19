@@ -57,6 +57,10 @@ fi
 
 # ============================= run on linux =============================
 if ["$(uname)"=="Linux"];then
+    wget "https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh"
+    bash Anaconda3-2019.03-Linux-x86_64.sh
+    rm Anaconda3-2019.03-Linux-x86_64.sh
+
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
     sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
