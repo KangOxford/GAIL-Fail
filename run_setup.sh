@@ -49,15 +49,12 @@ elif ["$uname"=="Colab/Linux"];then
     # git rm -r --cached .
 
 # ============================= run on linux =============================
-<<<<<<< HEAD
 elif ["$(uname)"=="Linux"];then
-=======
-if ["$(uname)"=="Linux"];then
     wget "https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh"
     bash Anaconda3-2019.03-Linux-x86_64.sh
     rm Anaconda3-2019.03-Linux-x86_64.sh
+    conda init bash
 
->>>>>>> 12e77d6defe3acc8230ae0f9df8d76b071634e58
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
     sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
@@ -79,9 +76,8 @@ if ["$(uname)"=="Linux"];then
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$MUJOCO_PY_MUJOCO_PATH
 
-
-    sudo apt install python-pip
-    pip install gym
+    # sudo apt install python-pip
+    pip install seals
     pip install stable-baselines3
 fi
 
