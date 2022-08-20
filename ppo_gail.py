@@ -10,32 +10,13 @@ import gym
 import seals
 env_string = "seals/Walker2d-v0"
 env = gym.make(env_string)
-testing = True
 
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
 from stable_baselines3.ppo import MlpPolicy
-from stable_baselines3.common.noise import NormalActionNoise, OrnsteinUhlenbeckActionNoise
-n_actions = env.action_space.shape[-1]
-action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
-# expert = DDPG(
-#     policy="MlpPolicy",
-#     env=env,
-#     action_noise=action_noise, 
-#     verbose=1,
-#     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
-# )
-# expert.save("ddpg_seal_expert")
-# expert = PPO(
-#     policy=MlpPolicy,
-#     env=env,
-#     seed=0,
-#     verbose=1,
-#     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
-# )
-# expert.save("ppo_seal_expert_0")
-# expert.save("sac_seal_expert_2")
-if not testing:
+
+generating_experts = False
+if generating_experts:
     expert = SAC(policy="MlpPolicy", 
                   env = env, 
                   verbose=1,
@@ -43,8 +24,7 @@ if not testing:
     expert.learn(1e5,tb_log_name="sac_seal_run") 
     expert.save("debug_sac_seal_expert-TVG")
 else: 
-    expert = SAC.load("/home/kangli/GAIL-Fail/debug_sac_seal_expert-TVG.zip")
-    # expert = SAC.load("debug_sac_seal_expert-mac")
+    expert = SAC.load("/Users/kang/GitHub/GAIL-Fail/experts/sac_seal_expert_1.zip")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
@@ -70,16 +50,17 @@ from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 import gym
 import seals
 
-venv = DummyVecEnv([lambda: gym.make(env_string)] * 1) ## version 3
-# venv = gym.make(env_string) ## version 2
-# venv = DummyVecEnv([lambda: gym.make(env_string)] * 8) ## version 1
+venv = DummyVecEnv([lambda: gym.make(env_string)] * 16) ## version 1
 
 # %% define the learner
-learner = DDPG(
-    policy="MlpPolicy",
+from stable_baselines3.ppo import MlpPolicy
+learner = PPO(
+    policy=MlpPolicy,
     env=venv,
-    action_noise=action_noise, 
-)
+    verbose=1,
+    tensorboard_log=\
+        "/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_mimic_ppo_gail/"
+    )
 reward_net = BasicRewardNet(
     venv.observation_space, venv.action_space, normalize_input_layer=RunningNorm
 )
@@ -100,8 +81,8 @@ learner_rewards_before_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
 # %% training the GAIL 2/2
-gail_trainer.train(int(1e5))  # Note: set to 300000 for better results
-# gail_trainer.train(int(3e6))  # Note: set to 300000 for better results
+# gail_trainer.train(int(1e5))  # Note: set to 300000 for better results
+gail_trainer.train(int(3e8))  # Note: set to 300000 for better results
 learner_rewards_after_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
@@ -120,3 +101,4 @@ plt.hist(
 )
 plt.legend()
 plt.show()
+# %%
