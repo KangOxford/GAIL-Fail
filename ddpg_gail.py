@@ -18,25 +18,11 @@ from stable_baselines3.ppo import MlpPolicy
 from stable_baselines3.common.noise import NormalActionNoise, OrnsteinUhlenbeckActionNoise
 n_actions = env.action_space.shape[-1]
 action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
-# expert = DDPG(
-#     policy="MlpPolicy",
-#     env=env,
-#     action_noise=action_noise, 
-#     verbose=1,
-#     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
-# )
-# expert = PPO(
-#     policy=MlpPolicy,
-#     env=env,
-#     seed=0,
-#     verbose=1,
-#     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
-# )
 if not testing:
     expert = SAC(policy="MlpPolicy", 
                   env = env, 
                   verbose=1,
-                  tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
+                  tensorboard_log="/home/kangli/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
     expert.learn(1e5,tb_log_name="sac_seal_run") 
     expert.save("debug_sac_seal_expert-TVG")
 else: 

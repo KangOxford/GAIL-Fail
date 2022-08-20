@@ -59,26 +59,37 @@ elif ["$(uname)"=="Linux"];then
     sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
     mkdir /home/$USER/.mujoco 
-    wget http://www.roboti.us/download/mjpro150_osx.zip
-    unzip mjpro150_osx.zip -d /home/$USER/.mujoco 
-    rm mjpro150_osx.zip
+    wget http://www.roboti.us/download/mjpro150_linux.zip
+    unzip mjpro150_linux.zip -d /home/$USER/.mujoco 
+    rm mjpro150_linux.zip
 
-    wget http://www.roboti.us/download/mujoco200_macos.zip
-    unzip mujoco200_macos.zip -d /home/$USER/.mujoco 
-    rm mujoco200_macos.zip
+    wget http://www.roboti.us/download/mujoco200_linux.zip
+    unzip mujoco200_linux.zip -d /home/$USER/.mujoco 
+    rm mujoco200_linux.zip
+
+    wget https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz
+    tar -zxvf mujoco210-linux-x86_64.tar.gz -C /home/$USER/.mujoco 
+    rm mujoco210-linux-x86_64.tar.gz
 
     wget http://www.roboti.us/file/mjkey.txt
     cp mjkey.txt /home/$USER/.mujoco/mjkey.txt
     rm mjkey.txt
 
     export PATH=/home/$USER/.mujoco/mjpro150/bin:$PATH
-    export PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$PATH
+    export PATH=/home/$USER/.mujoco/mujoco200_linux/bin:$PATH
+    export PATH=/home/$USER/.mujoco/mujoco210/bin:$PATH
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
-    export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco200_macos/bin:$MUJOCO_PY_MUJOCO_PATH
+    export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco200_linux/bin:$MUJOCO_PY_MUJOCO_PATH
+    export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco210/bin:$MUJOCO_PY_MUJOCO_PATH
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/kangli/.mujoco/mujoco210/bin:$LD_LIBRARY_PATH
+
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 
     # sudo apt install python-pip
     pip install seals
     pip install stable-baselines3
+    pip install tensorboard
+    pip install mujoco_py
 fi
 
 # git clone https://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@github.com/KangOxford/GAIL-Fail.git
