@@ -90,6 +90,9 @@ elif ["$(uname)"=="Linux"];then
     pip install stable-baselines3
     pip install tensorboard
     pip install mujoco_py
+# ============================= run when debug =============================
+elif ["$(uname)"=="Debug"];then
+    tensorboard --logdir /home/kangli/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/
 fi
 
 # git clone https://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@github.com/KangOxford/GAIL-Fail.git
