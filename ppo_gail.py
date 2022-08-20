@@ -25,6 +25,7 @@ action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n
 #     verbose=1,
 #     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
 # )
+# expert.save("ddpg_seal_expert")
 # expert = PPO(
 #     policy=MlpPolicy,
 #     env=env,
@@ -32,6 +33,8 @@ action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n
 #     verbose=1,
 #     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
 # )
+# expert.save("ppo_seal_expert_0")
+# expert.save("sac_seal_expert_2")
 if not testing:
     expert = SAC(policy="MlpPolicy", 
                   env = env, 
