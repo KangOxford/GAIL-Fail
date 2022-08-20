@@ -41,9 +41,10 @@ if not testing:
                   verbose=1,
                   tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
     expert.learn(1e5,tb_log_name="sac_seal_run") 
-    expert.save("debug_sac_seal_expert")
+    expert.save("debug_sac_seal_expert-TVG")
 else: 
-    expert = SAC.load("debug_sac_seal_expert")
+    expert = SAC.load("/home/kangli/GAIL-Fail/debug_sac_seal_expert-TVG.zip")
+    # expert = SAC.load("debug_sac_seal_expert-mac")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
