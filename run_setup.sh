@@ -90,6 +90,8 @@ elif ["$(uname)"=="Linux"];then
     pip install stable-baselines3
     pip install tensorboard
     pip install mujoco_py
+    pip install imitation
+    
 # ============================= run when debug =============================
 elif ["$(uname)"=="Debug"];then
     tensorboard --logdir /home/kangli/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/

@@ -24,7 +24,7 @@ if not testing:
                   verbose=1,
                   tensorboard_log="/home/kangli/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
     expert.learn(1e5,tb_log_name="sac_seal_run") 
-    expert.save("debug_sac_seal_expert-TVG")
+    expert.save("/home/kangli/GAIL-Fail/debug_sac_seal_expert-TVG.zip")
 else: 
     expert = SAC.load("/home/kangli/GAIL-Fail/debug_sac_seal_expert-TVG.zip")
     # expert = SAC.load("debug_sac_seal_expert-mac")
