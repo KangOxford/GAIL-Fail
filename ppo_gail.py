@@ -33,7 +33,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 
 rollouts = rollout.rollout(
     expert,
-    DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 5),
+    DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 16),
     rollout.make_sample_until(min_timesteps=None, min_episodes=60),
 )
 # %% Now we are ready to set up our GAIL trainer.
