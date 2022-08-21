@@ -6,6 +6,7 @@ Created on Fri Aug 19 12:49:17 2022
 @author: kang
 
 This version is the ppo_gail using cuda and expert learns 1e8 epoches
+and env = venv with 1 times.
 """
 # %% we first need an expert.
 import gym
@@ -17,16 +18,18 @@ env = gym.make(env_string)
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
 from stable_baselines3.ppo import MlpPolicy
+from stable_baselines3.common.vec_env import DummyVecEnv
 
 generating_experts = False
 if generating_experts:
+    venv = DummyVecEnv([lambda: gym.make(env_string)] * 1)
     expert = SAC(policy="MlpPolicy", 
-                  env = env, 
+                  env = venv, 
                   verbose=1,
                   tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
                   device = "cuda")
     expert.learn(1e8,tb_log_name="sac_robots_run") 
-    expert.save("expert_sac_robots_v6")
+    expert.save("a","expert_sac_robots_v6")
 else: 
     expert = SAC.load("/home/kang/GAIL-Fail/experts/sac_seal_expert_1.zip")
 
