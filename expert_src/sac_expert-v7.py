@@ -15,6 +15,7 @@ import seals
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
 from stable_baselines3.ppo import MlpPolicy
+from stable_baselines3.bench import Monitor
 
 env_string = "seals/Walker2d-v0"
 generating_experts = False
