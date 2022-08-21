@@ -24,7 +24,8 @@ if generating_experts:
                   env = env, 
                   verbose=1,
                   tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
-                  device = "cuda")
+                  device = "cuda"
+                  )
     expert.learn(1e8,tb_log_name="sac_robots_run") 
     expert.save("expert_sac_robots_v6")
 else: 

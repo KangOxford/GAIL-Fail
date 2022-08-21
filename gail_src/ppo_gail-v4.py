@@ -26,7 +26,7 @@ if generating_experts:
                   tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
                   device = "cpu")
     expert.learn(1e8,tb_log_name="sac_robots_run") 
-    expert.save("a","expert_sac_robots_v6")
+    expert.save("expert_sac_robots_v6")
 else: 
     expert = SAC.load("/home/kang/GAIL-Fail/experts/sac_seal_expert_1.zip")
 
