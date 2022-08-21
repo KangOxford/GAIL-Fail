@@ -10,6 +10,7 @@ import gym
 import seals
 env_string = "seals/Walker2d-v0"
 env = gym.make(env_string)
+# import gym; import seals; env = gym.make("seals/Walker2d-v0")
 
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
