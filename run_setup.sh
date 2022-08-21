@@ -28,12 +28,12 @@ if ["$(uname)"=="Darwin"];then
 
 
 # ============================= run on colab =============================
-elif ["$uname"=="Colab/Linux"];then
+elif ["$uname"=="Colab"];then
     export PATH=/workspace/.mujoco/mjpro150/bin:$PATH
     export PATH=/workspace/.mujoco/mjpro200_linux/bin:$PATH
     export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
     export MUJOCO_PY_MUJOCO_PATH=/workspace/.mujoco/mjpro200_linux/bin:$MUJOCO_PY_MUJOCO_PATH
-    export PATH=/workspace/anaconda3/bin:$PATH
+    # export PATH=/workspace/anaconda3/bin:$PATH
     # export PATH=/workspace/GAIL-Fail/stable-baselines/d2-imitation:$PATH
     # export PATH=/workspace/GAIL-Fail/stable-baselines/d2-imitation/baselines:$PATH
     sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
