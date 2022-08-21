@@ -18,18 +18,22 @@ from stable_baselines3.ppo import MlpPolicy
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 env_string = "seals/Walker2d-v0"
+# env_string = "Walker2d-v2"
 generating_experts = False
 if generating_experts:
-    venv = DummyVecEnv([lambda: gym.make(env_string)] * 1)
+    # venv = DummyVecEnv([lambda: gym.make(env_string)] * 1)
+    env = gym.make(env_string)
     expert = SAC(policy="MlpPolicy", 
-                  env = venv, 
+                  env = env, 
                   verbose=1,
-                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
+                  tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/expert_sac_robots/",
                   device = "cpu")
     expert.learn(1e8,tb_log_name="sac_robots_run") 
-    expert.save("a","expert_sac_robots_v6")
+    # tensorboard --logdir /Users/kang/GitHub/GAIL-Fail/tensorboard/expert_sac_robots/
+    import time;file_string = "/Users/kang/GitHub/GAIL-Fail/outputs/"+str(int(time.time()))
+    expert.save(file_string + "/expert_sac_robots_v6.zip")
 else: 
-    expert = SAC.load("/home/kang/GAIL-Fail/experts/sac_seal_expert_1.zip")
+    expert = SAC.load("/Users/kang/GitHub/GAIL-Fail/experts/sac_seal_expert_1.zip")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
