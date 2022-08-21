@@ -78,11 +78,12 @@ elif ["$(uname)"=="Linux"];then
 
     export PATH=/home/$USER/.mujoco/mjpro150/bin:$PATH
     export PATH=/home/$USER/.mujoco/mujoco200_linux/bin:$PATH
-    export PATH=/home/$USER/.mujoco/mujoco210/bin:$PATH
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mjpro150/bin:$MUJOCO_PY_MUJOCO_PATH
     export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco200_linux/bin:$MUJOCO_PY_MUJOCO_PATH
-    export MUJOCO_PY_MUJOCO_PATH=/home/$USER/.mujoco/mujoco210/bin:$MUJOCO_PY_MUJOCO_PATH
-    export LD_LIBRARY_PATH=home/kangli/.mujoco/mujoco210/bin:$LD_LIBRARY_PATH
+    
+    export PATH=~/.mujoco/mujoco210/bin:$PATH
+    export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco210/bin:$MUJOCO_PY_MUJOCO_PATH
+    export LD_LIBRARY_PATH=~/.mujoco/mujoco210/bin:$LD_LIBRARY_PATH
 
     export LD_LIBRARY_PATH=/usr/lib/nvidia:$LD_LIBRARY_PATH
 
