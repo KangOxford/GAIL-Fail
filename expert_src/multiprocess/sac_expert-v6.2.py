@@ -5,28 +5,36 @@ Created on Fri Aug 19 12:49:17 2022
 
 @author: kang
 
-This version is the ppo_gail using gpu and expert learns 1e8 epoches
+This version is the ppo_gail using cpu and expert learns 1e8 epoches
 and env = env with 1 times.
 can show the rollout results
 """
-# %% we first need an expert.
+# %% we first need an expert. 1/2
 import gym
 import seals
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
 from stable_baselines3.ppo import MlpPolicy
 from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.env_util import make_vec_env
+from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 
-env_string = "seals/Walker2d-v0"
-generating_experts = False
-if generating_experts:
-    env = Monitor(gym.make(env_string))
-    expert = SAC(policy="MlpPolicy", 
+# %% we first need an expert. 2/2
+num_cpu = 8
+env_id = "seals/Walker2d-v0"
+is_generating_experts = False
+if is_generating_experts:
+    # env = SubprocVecEnv([make_env(env_id, i) for i in range(num_cpu)])
+    # env = make_vec_env(env_id", n_envs=num_cpu, seed=0)
+    env = DummyVecEnv([lambda: gym.make(env_id)] * num_cpu)
+    # env = Monitor(DummyVecEnv([lambda: gym.make(env_id)] * num_cpu))
+    expert = PPO(policy="MlpPolicy", 
                   env = env, 
                   verbose=1,
-                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
-                  device = "cuda")
-    expert.learn(1e8,tb_log_name="sac_robots_cuda_run") 
+                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots_parallel/",
+                  device = "cpu")
+    expert.learn(total_timesteps=1e8,tb_log_name="sac_robots_cpu_run") 
+    # tensorboard --logdir /home/kang/GAIL-Fail/tensorboard/expert_sac_robots/
     expert.save("a","expert_sac_robots_v6")
 else: 
     expert = SAC.load("/home/kang/GAIL-Fail/experts/sac_seal_expert_1.zip")

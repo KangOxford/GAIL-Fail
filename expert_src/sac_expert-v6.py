@@ -15,7 +15,7 @@ import seals
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
 from stable_baselines3.ppo import MlpPolicy
-from stable_baselines3.bench import Monitor
+from stable_baselines3.common.monitor import Monitor
 
 env_string = "seals/Walker2d-v0"
 is_generating_experts = False
@@ -26,7 +26,7 @@ if is_generating_experts:
                   verbose=1,
                   tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
                   device = "cpu")
-    expert.learn(1e8,tb_log_name="sac_robots_run") 
+    expert.learn(1e8,tb_log_name="sac_robots_cpu_run") 
     # tensorboard --logdir /home/kang/GAIL-Fail/tensorboard/expert_sac_robots/
     expert.save("a","expert_sac_robots_v6")
 else: 
