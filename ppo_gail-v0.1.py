@@ -125,4 +125,23 @@ print(f"Reward before training: {reward_before_training}")
 
 bc_trainer.train(n_epochs=int(3e8))
 reward_after_training, _ = evaluate_policy(bc_trainer.policy, env, 10)
+reward_after_training, _ = evaluate_policy(bc_trainer.policy, env, 100)
 print(f"Reward after training: {reward_after_training}")
+
+from tqdm import tqdm
+reward_after_training_list = []
+for i in tqdm(range(100)):
+    reward_after_training, _ = evaluate_policy(bc_trainer.policy, env, 100)
+    reward_after_training_list.append(reward_after_training)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,6 +1,13 @@
+
+
 git config --global user.email "kang.li@maths.ox.ac.uk"
 git config --global user.name "KangOxford"
 
+module load CMake/3.23.1-GCCcore-11.3.0
+module load mpi/openmpi-x86_64
+
+
+mkdir ~/.mujoco
 wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
 tar -zxvf mujoco210-linux-x86_64.tar.gz -C ~/.mujoco 
 rm mujoco210-linux-x86_64.tar.gz
