@@ -5,6 +5,12 @@ wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
 tar -zxvf mujoco210-linux-x86_64.tar.gz -C ~/.mujoco 
 rm mujoco210-linux-x86_64.tar.gz
 
+wget http://www.roboti.us/file/mjkey.txt
+cp mjkey.txt ~/.mujoco/mjkey.txt
+rm mjkey.txt
+
+
+
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
 sudo apt-get install -y libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev software-properties-common patchelf
 
@@ -27,4 +33,7 @@ pip install imitation
 
 
 
+git clone https://github.com/tadashiK/mujoco-py
+cp ~/.mujoco/mjkey.txt mujoco-py/singularity
+cd mujoco-py/singularity
 
