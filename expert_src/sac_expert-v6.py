@@ -24,7 +24,7 @@ if is_generating_experts:
     expert = SAC(policy="MlpPolicy", 
                   env = env, 
                   verbose=1,
-                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
+                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots-v6/",
                   device = "cpu")
     expert.learn(1e12,tb_log_name="sac_robots_cpu_run") 
     # tensorboard --logdir /home/kang/GAIL-Fail/tensorboard/expert_sac_robots/

@@ -24,7 +24,7 @@ if generating_experts:
     expert = SAC(policy="MlpPolicy", 
                   env = env, 
                   verbose=1,
-                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
+                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots-v7/",
                   device = "cuda")
     expert.learn(1e8,tb_log_name="sac_robots_cuda_run") 
     expert.save("a","expert_sac_robots_v6")
