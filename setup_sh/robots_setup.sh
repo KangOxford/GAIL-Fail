@@ -30,6 +30,7 @@ pip install stable-baselines3
 pip install tensorboard
 pip install mujoco-py
 pip install imitation
+pip install tensorflow
 
 
 

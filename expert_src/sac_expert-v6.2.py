@@ -25,12 +25,12 @@ env = Monitor(gym.make(env_string))
 expert = SAC(policy="MlpPolicy", 
                 env = env, 
                 verbose=1,
-                tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots-v6.2-trained-v2/",
+                tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robotsv3/",
                 device = "cuda"
                 )
 expert.learn(int(1e3),tb_log_name="sac_robots_cuda_run")
 for i in range(int(1e2)):
     expert.learn(int(1e6),tb_log_name="sac_robots_cuda_run", reset_num_timesteps=False) 
-    expert.save("home/kang/GAIL-Fail/experts/linux_generated/expert_sac_robots_cuda-v6.2-trained-v2.zip")
+    expert.save("home/kang/GAIL-Fail/experts/linux_generated/expert_sac_robots_cuda_v3.zip")
     # import time;file_string = "/home/kang/GAIL-Fail/experts/linux_generated/"+str(int(time.time()))
     # expert.save(file_string + "/expert_sac_robots_cpu-v6.2-train.zip")
