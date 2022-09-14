@@ -18,34 +18,9 @@ from stable_baselines3.ppo import MlpPolicy
 from stable_baselines3.common.noise import NormalActionNoise, OrnsteinUhlenbeckActionNoise
 n_actions = env.action_space.shape[-1]
 action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
-# expert = DDPG(
-#     policy="MlpPolicy",
-#     env=env,
-#     action_noise=action_noise, 
-#     verbose=1,
-#     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
-# )
-# expert.save("ddpg_seal_expert")
-# expert = PPO(
-#     policy=MlpPolicy,
-#     env=env,
-#     seed=0,
-#     verbose=1,
-#     tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/sac_walker2dv2_expert/"
-# )
-# expert.save("ppo_seal_expert_0")
-# expert.save("sac_seal_expert_2")
-if not testing:
-    # expert = SAC(policy="MlpPolicy", 
-    #               env = env, 
-    #               verbose=1,
-    #               tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
-    # expert.learn(1e5,tb_log_name="sac_seal_run") 
-    # expert.save("debug_sac_seal_expert-TVG")
-    pass
-else: 
-    expert = SAC.load("/home/kang/GAIL-Fail/experts/linux_generated/1662776138/expert_sac_robots_cuda-v8.zip")
-    print(">>> Load pretrained experts")
+
+expert = SAC.load("/home/kang/GAIL-Fail/experts/linux_generated/1662776138/expert_sac_robots_cuda-v8.zip")
+print(">>> Load pretrained experts")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
@@ -54,8 +29,8 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 
 rollouts = rollout.rollout(
     expert,
-    DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 5),
-    rollout.make_sample_until(min_timesteps=None, min_episodes=60),
+    DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 10),
+    rollout.make_sample_until(min_timesteps=None, min_episodes=600),
 )
 # %% Now we are ready to set up our GAIL trainer.
 # Note, that the `reward_net` is actually the network of the discriminator.
@@ -94,6 +69,7 @@ gail_trainer = GAIL(
     venv=venv,
     gen_algo=learner,
     reward_net=reward_net,
+    log_dir = "/home/kang/GAIL-Fail/train_tb_ddpg_gail/"
 )
 
 # %% traning the GAIL 1/2
