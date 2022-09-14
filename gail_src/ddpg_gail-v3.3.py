@@ -33,9 +33,8 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 rollouts = rollout.rollout(
     expert,
     DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 10),
-    rollout.make_sample_until(min_timesteps=None, min_episodes=6),
+    rollout.make_sample_until(min_timesteps=None, min_episodes=600),
 )
-# TODO: too small min_episodes for rollout
 
 # %% Now we are ready to set up our GAIL trainer.
 # Note, that the `reward_net` is actually the network of the discriminator.
