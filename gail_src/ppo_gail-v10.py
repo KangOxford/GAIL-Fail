@@ -5,30 +5,25 @@ Created on Fri Aug 19 12:49:17 2022
 
 @author: kang
 
-This version is the ppo_gail using cpu and expert learns 1e8 epoches
-and env = venv with 1 times.
+based on the ddpg_gail-v3.5
+
 """
 # %% we first need an expert.
 import gym
 import seals
+env_string = "seals/Walker2d-v0"
+env = gym.make(env_string)
+testing = True
+
 import numpy as np
 from stable_baselines3 import PPO, DDPG, SAC
 from stable_baselines3.ppo import MlpPolicy
-from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.noise import NormalActionNoise, OrnsteinUhlenbeckActionNoise
+n_actions = env.action_space.shape[-1]
+action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
 
-env_string = "seals/Walker2d-v0"
-generating_experts = False
-if generating_experts:
-    venv = DummyVecEnv([lambda: gym.make(env_string)] * 1)
-    expert = SAC(policy="MlpPolicy", 
-                  env = venv, 
-                  verbose=1,
-                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
-                  device = "cpu")
-    expert.learn(1e8,tb_log_name="sac_robots_run") 
-    expert.save("expert_sac_robots_v6")
-else: 
-    expert = SAC.load("/home/kang/GAIL-Fail/experts/sac_seal_expert_1.zip")
+expert = SAC.load("/home/kang/GAIL-Fail/experts/linux_generated/1662757477/expert_sac_robots_cuda-v8.zip")
+print(">>> Load pretrained experts")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
@@ -37,9 +32,10 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 
 rollouts = rollout.rollout(
     expert,
-    DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 64),
-    rollout.make_sample_until(min_timesteps=None, min_episodes=60),
+    DummyVecEnv([lambda: RolloutInfoWrapper(gym.make(env_string))] * 5),
+    rollout.make_sample_until(min_timesteps=None, min_episodes=100),
 )
+
 # %% Now we are ready to set up our GAIL trainer.
 # Note, that the `reward_net` is actually the network of the discriminator.
 # We evaluate the learner before and after training so we can see if it made any progress.
@@ -68,6 +64,18 @@ learner = PPO(
 reward_net = BasicRewardNet(
     venv.observation_space, venv.action_space, normalize_input_layer=RunningNorm
 )
+reward_net = BasicRewardNet(
+    venv.observation_space, venv.action_space, normalize_input_layer=RunningNorm
+)
+# %% costum logger 
+
+from stable_baselines3.common.logger import configure
+tmp_path = "/home/kang/GAIL-Fail/train_tb_ppo_gail_10/"
+new_logger = configure(tmp_path, ["stdout", "csv", "tensorboard"])
+
+
+from imitation.util.logger import HierarchicalLogger
+new_logger = HierarchicalLogger(new_logger, ["stdout", "log","csv"])
 
 # %% define the GAIL
 gail_trainer = GAIL(
@@ -78,6 +86,8 @@ gail_trainer = GAIL(
     venv=venv,
     gen_algo=learner,
     reward_net=reward_net,
+    custom_logger = new_logger,
+    log_dir = tmp_path
 )
 
 # %% traning the GAIL 1/2
@@ -85,8 +95,8 @@ learner_rewards_before_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
 # %% training the GAIL 2/2
-# gail_trainer.train(int(1e5))  # Note: set to 300000 for better results
-gail_trainer.train(int(3e8))  # Note: set to 300000 for better results
+gail_trainer.train(int(10e6))  # Note: set to 300000 for better results
+
 learner_rewards_after_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
@@ -105,4 +115,3 @@ plt.hist(
 )
 plt.legend()
 plt.show()
-# %%

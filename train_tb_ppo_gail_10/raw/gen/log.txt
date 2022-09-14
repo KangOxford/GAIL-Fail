@@ -1,0 +1,45 @@
+----------------------------------------
+| raw/                        |        |
+|    gen/time/fps             | 3422   |
+|    gen/time/iterations      | 1      |
+|    gen/time/time_elapsed    | 38     |
+|    gen/time/total_timesteps | 131072 |
+----------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 628         |
+|    gen/time/fps                    | 3409        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 262144      |
+|    gen/train/approx_kl             | 0.009373657 |
+|    gen/train/clip_fraction         | 0.116       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.51       |
+|    gen/train/explained_variance    | -0.26       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0717      |
+|    gen/train/n_updates             | 10          |
+|    gen/train/policy_gradient_loss  | -0.00415    |
+|    gen/train/std                   | 1           |
+|    gen/train/value_loss            | 2.14        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 642         |
+|    gen/time/fps                    | 3419        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 393216      |
+|    gen/train/approx_kl             | 0.011799667 |
+|    gen/train/clip_fraction         | 0.152       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.53       |
+|    gen/train/explained_variance    | 0.0204      |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0494      |
+|    gen/train/n_updates             | 20          |
+|    gen/train/policy_gradient_loss  | -0.00449    |
+|    gen/train/std                   | 1           |
+|    gen/train/value_loss            | 1.21        |
+----------------------------------------------------
