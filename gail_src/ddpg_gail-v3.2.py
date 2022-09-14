@@ -4,6 +4,9 @@
 Created on Fri Aug 19 12:49:17 2022
 
 @author: kang
+
+just used for testing 
+do not run experiment based on it
 """
 # %% we first need an expert.
 import gym
@@ -69,6 +72,7 @@ gail_trainer = GAIL(
     venv=venv,
     gen_algo=learner,
     reward_net=reward_net,
+    custom_logger = "/home/kang/GAIL-Fail/train_tb_ddpg_gail/",
     log_dir = "/home/kang/GAIL-Fail/train_tb_ddpg_gail/"
 )
 
