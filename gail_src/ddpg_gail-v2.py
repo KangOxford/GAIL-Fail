@@ -36,15 +36,16 @@ action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n
 # expert.save("ppo_seal_expert_0")
 # expert.save("sac_seal_expert_2")
 if not testing:
-    expert = SAC(policy="MlpPolicy", 
-                  env = env, 
-                  verbose=1,
-                  tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
-    expert.learn(1e5,tb_log_name="sac_seal_run") 
-    expert.save("debug_sac_seal_expert-TVG")
+    # expert = SAC(policy="MlpPolicy", 
+    #               env = env, 
+    #               verbose=1,
+    #               tensorboard_log="/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_sac_walker2dv0_expert/")
+    # expert.learn(1e5,tb_log_name="sac_seal_run") 
+    # expert.save("debug_sac_seal_expert-TVG")
+    pass
 else: 
-    expert = SAC.load("/home/kangli/GAIL-Fail/debug_sac_seal_expert-TVG.zip")
-    # expert = SAC.load("debug_sac_seal_expert-mac")
+    expert = SAC.load("/home/kang/GAIL-Fail/experts/linux_generated/1662776138/expert_sac_robots_cuda-v8.zip")
+    print(">>> Load pretrained experts")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
@@ -100,8 +101,8 @@ learner_rewards_before_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )
 # %% training the GAIL 2/2
-gail_trainer.train(int(1e5))  # Note: set to 300000 for better results
-# gail_trainer.train(int(3e6))  # Note: set to 300000 for better results
+gail_trainer.train(int(10e6))  # Note: set to 300000 for better results
+
 learner_rewards_after_training, _ = evaluate_policy(
     learner, venv, 100, return_episode_rewards=True
 )

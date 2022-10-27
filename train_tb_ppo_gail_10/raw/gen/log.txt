@@ -1,0 +1,976 @@
+----------------------------------------
+| raw/                        |        |
+|    gen/time/fps             | 3422   |
+|    gen/time/iterations      | 1      |
+|    gen/time/time_elapsed    | 38     |
+|    gen/time/total_timesteps | 131072 |
+----------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 628         |
+|    gen/time/fps                    | 3409        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 262144      |
+|    gen/train/approx_kl             | 0.009373657 |
+|    gen/train/clip_fraction         | 0.116       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.51       |
+|    gen/train/explained_variance    | -0.26       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0717      |
+|    gen/train/n_updates             | 10          |
+|    gen/train/policy_gradient_loss  | -0.00415    |
+|    gen/train/std                   | 1           |
+|    gen/train/value_loss            | 2.14        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 642         |
+|    gen/time/fps                    | 3419        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 393216      |
+|    gen/train/approx_kl             | 0.011799667 |
+|    gen/train/clip_fraction         | 0.152       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.53       |
+|    gen/train/explained_variance    | 0.0204      |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0494      |
+|    gen/train/n_updates             | 20          |
+|    gen/train/policy_gradient_loss  | -0.00449    |
+|    gen/train/std                   | 1           |
+|    gen/train/value_loss            | 1.21        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 632         |
+|    gen/time/fps                    | 3419        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 524288      |
+|    gen/train/approx_kl             | 0.013470318 |
+|    gen/train/clip_fraction         | 0.184       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.54       |
+|    gen/train/explained_variance    | 0.0533      |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.259       |
+|    gen/train/n_updates             | 30          |
+|    gen/train/policy_gradient_loss  | -0.00734    |
+|    gen/train/std                   | 1           |
+|    gen/train/value_loss            | 0.788       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 624         |
+|    gen/time/fps                    | 3421        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 655360      |
+|    gen/train/approx_kl             | 0.014021142 |
+|    gen/train/clip_fraction         | 0.201       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.51       |
+|    gen/train/explained_variance    | 0.152       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.352       |
+|    gen/train/n_updates             | 40          |
+|    gen/train/policy_gradient_loss  | -0.00988    |
+|    gen/train/std                   | 0.998       |
+|    gen/train/value_loss            | 0.566       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 617         |
+|    gen/time/fps                    | 3279        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 39          |
+|    gen/time/total_timesteps        | 786432      |
+|    gen/train/approx_kl             | 0.014243823 |
+|    gen/train/clip_fraction         | 0.199       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.47       |
+|    gen/train/explained_variance    | 0.315       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.174       |
+|    gen/train/n_updates             | 50          |
+|    gen/train/policy_gradient_loss  | -0.0118     |
+|    gen/train/std                   | 0.992       |
+|    gen/train/value_loss            | 0.438       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 610         |
+|    gen/time/fps                    | 3441        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 917504      |
+|    gen/train/approx_kl             | 0.014614953 |
+|    gen/train/clip_fraction         | 0.206       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.42       |
+|    gen/train/explained_variance    | 0.529       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.109       |
+|    gen/train/n_updates             | 60          |
+|    gen/train/policy_gradient_loss  | -0.0135     |
+|    gen/train/std                   | 0.985       |
+|    gen/train/value_loss            | 0.381       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 608         |
+|    gen/time/fps                    | 3376        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 38          |
+|    gen/time/total_timesteps        | 1048576     |
+|    gen/train/approx_kl             | 0.014046913 |
+|    gen/train/clip_fraction         | 0.199       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.37       |
+|    gen/train/explained_variance    | 0.708       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.146       |
+|    gen/train/n_updates             | 70          |
+|    gen/train/policy_gradient_loss  | -0.0137     |
+|    gen/train/std                   | 0.977       |
+|    gen/train/value_loss            | 0.367       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 620         |
+|    gen/time/fps                    | 3290        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 39          |
+|    gen/time/total_timesteps        | 1179648     |
+|    gen/train/approx_kl             | 0.014326648 |
+|    gen/train/clip_fraction         | 0.207       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.31       |
+|    gen/train/explained_variance    | 0.786       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.185       |
+|    gen/train/n_updates             | 80          |
+|    gen/train/policy_gradient_loss  | -0.0153     |
+|    gen/train/std                   | 0.966       |
+|    gen/train/value_loss            | 0.33        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 625         |
+|    gen/time/fps                    | 3252        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 40          |
+|    gen/time/total_timesteps        | 1310720     |
+|    gen/train/approx_kl             | 0.016693268 |
+|    gen/train/clip_fraction         | 0.24        |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.22       |
+|    gen/train/explained_variance    | 0.82        |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.18        |
+|    gen/train/n_updates             | 90          |
+|    gen/train/policy_gradient_loss  | -0.0186     |
+|    gen/train/std                   | 0.953       |
+|    gen/train/value_loss            | 0.27        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 616         |
+|    gen/time/fps                    | 3281        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 39          |
+|    gen/time/total_timesteps        | 1441792     |
+|    gen/train/approx_kl             | 0.017867185 |
+|    gen/train/clip_fraction         | 0.263       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.13       |
+|    gen/train/explained_variance    | 0.825       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0389      |
+|    gen/train/n_updates             | 100         |
+|    gen/train/policy_gradient_loss  | -0.0217     |
+|    gen/train/std                   | 0.938       |
+|    gen/train/value_loss            | 0.173       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 594         |
+|    gen/time/fps                    | 3298        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 39          |
+|    gen/time/total_timesteps        | 1572864     |
+|    gen/train/approx_kl             | 0.019384123 |
+|    gen/train/clip_fraction         | 0.282       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -8.03       |
+|    gen/train/explained_variance    | 0.852       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.00235     |
+|    gen/train/n_updates             | 110         |
+|    gen/train/policy_gradient_loss  | -0.0251     |
+|    gen/train/std                   | 0.924       |
+|    gen/train/value_loss            | 0.11        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 565         |
+|    gen/time/fps                    | 3824        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 1703936     |
+|    gen/train/approx_kl             | 0.019651987 |
+|    gen/train/clip_fraction         | 0.287       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.94       |
+|    gen/train/explained_variance    | 0.835       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0305      |
+|    gen/train/n_updates             | 120         |
+|    gen/train/policy_gradient_loss  | -0.0264     |
+|    gen/train/std                   | 0.91        |
+|    gen/train/value_loss            | 0.0863      |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 533         |
+|    gen/time/fps                    | 3796        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 1835008     |
+|    gen/train/approx_kl             | 0.018941458 |
+|    gen/train/clip_fraction         | 0.277       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.87       |
+|    gen/train/explained_variance    | 0.747       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0411      |
+|    gen/train/n_updates             | 130         |
+|    gen/train/policy_gradient_loss  | -0.0256     |
+|    gen/train/std                   | 0.901       |
+|    gen/train/value_loss            | 0.118       |
+----------------------------------------------------
+---------------------------------------------------
+| raw/                               |            |
+|    gen/rollout/ep_rew_wrapped_mean | 503        |
+|    gen/time/fps                    | 3784       |
+|    gen/time/iterations             | 1          |
+|    gen/time/time_elapsed           | 34         |
+|    gen/time/total_timesteps        | 1966080    |
+|    gen/train/approx_kl             | 0.01923625 |
+|    gen/train/clip_fraction         | 0.278      |
+|    gen/train/clip_range            | 0.2        |
+|    gen/train/entropy_loss          | -7.81      |
+|    gen/train/explained_variance    | 0.543      |
+|    gen/train/learning_rate         | 0.0003     |
+|    gen/train/loss                  | 0.0473     |
+|    gen/train/n_updates             | 140        |
+|    gen/train/policy_gradient_loss  | -0.0244    |
+|    gen/train/std                   | 0.892      |
+|    gen/train/value_loss            | 0.208      |
+---------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 480         |
+|    gen/time/fps                    | 3801        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 2097152     |
+|    gen/train/approx_kl             | 0.019130673 |
+|    gen/train/clip_fraction         | 0.281       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.75       |
+|    gen/train/explained_variance    | 0.495       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.161       |
+|    gen/train/n_updates             | 150         |
+|    gen/train/policy_gradient_loss  | -0.0263     |
+|    gen/train/std                   | 0.883       |
+|    gen/train/value_loss            | 0.344       |
+----------------------------------------------------
+--------------------------------------------------
+| raw/                               |           |
+|    gen/rollout/ep_rew_wrapped_mean | 468       |
+|    gen/time/fps                    | 3776      |
+|    gen/time/iterations             | 1         |
+|    gen/time/time_elapsed           | 34        |
+|    gen/time/total_timesteps        | 2228224   |
+|    gen/train/approx_kl             | 0.0197843 |
+|    gen/train/clip_fraction         | 0.28      |
+|    gen/train/clip_range            | 0.2       |
+|    gen/train/entropy_loss          | -7.68     |
+|    gen/train/explained_variance    | 0.434     |
+|    gen/train/learning_rate         | 0.0003    |
+|    gen/train/loss                  | 0.316     |
+|    gen/train/n_updates             | 160       |
+|    gen/train/policy_gradient_loss  | -0.0243   |
+|    gen/train/std                   | 0.871     |
+|    gen/train/value_loss            | 0.545     |
+--------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 462         |
+|    gen/time/fps                    | 3753        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 2359296     |
+|    gen/train/approx_kl             | 0.019484153 |
+|    gen/train/clip_fraction         | 0.278       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.59       |
+|    gen/train/explained_variance    | 0.613       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.274       |
+|    gen/train/n_updates             | 170         |
+|    gen/train/policy_gradient_loss  | -0.023      |
+|    gen/train/std                   | 0.86        |
+|    gen/train/value_loss            | 0.735       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 456         |
+|    gen/time/fps                    | 3719        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 35          |
+|    gen/time/total_timesteps        | 2490368     |
+|    gen/train/approx_kl             | 0.018948562 |
+|    gen/train/clip_fraction         | 0.265       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.51       |
+|    gen/train/explained_variance    | 0.811       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.653       |
+|    gen/train/n_updates             | 180         |
+|    gen/train/policy_gradient_loss  | -0.017      |
+|    gen/train/std                   | 0.848       |
+|    gen/train/value_loss            | 0.759       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 420         |
+|    gen/time/fps                    | 3777        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 2621440     |
+|    gen/train/approx_kl             | 0.013796335 |
+|    gen/train/clip_fraction         | 0.193       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.43       |
+|    gen/train/explained_variance    | 0.885       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.235       |
+|    gen/train/n_updates             | 190         |
+|    gen/train/policy_gradient_loss  | -0.0102     |
+|    gen/train/std                   | 0.837       |
+|    gen/train/value_loss            | 0.848       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 412         |
+|    gen/time/fps                    | 3719        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 35          |
+|    gen/time/total_timesteps        | 2752512     |
+|    gen/train/approx_kl             | 0.010993231 |
+|    gen/train/clip_fraction         | 0.144       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.36       |
+|    gen/train/explained_variance    | 0.929       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.69        |
+|    gen/train/n_updates             | 200         |
+|    gen/train/policy_gradient_loss  | -0.00653    |
+|    gen/train/std                   | 0.826       |
+|    gen/train/value_loss            | 0.824       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 335         |
+|    gen/time/fps                    | 3792        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 2883584     |
+|    gen/train/approx_kl             | 0.010796091 |
+|    gen/train/clip_fraction         | 0.141       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.28       |
+|    gen/train/explained_variance    | 0.965       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.486       |
+|    gen/train/n_updates             | 210         |
+|    gen/train/policy_gradient_loss  | -0.00594    |
+|    gen/train/std                   | 0.816       |
+|    gen/train/value_loss            | 0.768       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 298         |
+|    gen/time/fps                    | 3751        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 3014656     |
+|    gen/train/approx_kl             | 0.011724741 |
+|    gen/train/clip_fraction         | 0.159       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.2        |
+|    gen/train/explained_variance    | 0.982       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.39        |
+|    gen/train/n_updates             | 220         |
+|    gen/train/policy_gradient_loss  | -0.00638    |
+|    gen/train/std                   | 0.806       |
+|    gen/train/value_loss            | 0.749       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 261         |
+|    gen/time/fps                    | 3818        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 3145728     |
+|    gen/train/approx_kl             | 0.012950424 |
+|    gen/train/clip_fraction         | 0.178       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.13       |
+|    gen/train/explained_variance    | 0.988       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.209       |
+|    gen/train/n_updates             | 230         |
+|    gen/train/policy_gradient_loss  | -0.00638    |
+|    gen/train/std                   | 0.795       |
+|    gen/train/value_loss            | 0.74        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 241         |
+|    gen/time/fps                    | 3764        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 3276800     |
+|    gen/train/approx_kl             | 0.014494049 |
+|    gen/train/clip_fraction         | 0.199       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -7.05       |
+|    gen/train/explained_variance    | 0.99        |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.397       |
+|    gen/train/n_updates             | 240         |
+|    gen/train/policy_gradient_loss  | -0.00753    |
+|    gen/train/std                   | 0.786       |
+|    gen/train/value_loss            | 0.708       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 227         |
+|    gen/time/fps                    | 3833        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 3407872     |
+|    gen/train/approx_kl             | 0.014897138 |
+|    gen/train/clip_fraction         | 0.207       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.99       |
+|    gen/train/explained_variance    | 0.99        |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.546       |
+|    gen/train/n_updates             | 250         |
+|    gen/train/policy_gradient_loss  | -0.00837    |
+|    gen/train/std                   | 0.778       |
+|    gen/train/value_loss            | 0.698       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 234         |
+|    gen/time/fps                    | 3783        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 3538944     |
+|    gen/train/approx_kl             | 0.015564316 |
+|    gen/train/clip_fraction         | 0.215       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.94       |
+|    gen/train/explained_variance    | 0.988       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.246       |
+|    gen/train/n_updates             | 260         |
+|    gen/train/policy_gradient_loss  | -0.0109     |
+|    gen/train/std                   | 0.771       |
+|    gen/train/value_loss            | 0.664       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 246         |
+|    gen/time/fps                    | 3297        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 39          |
+|    gen/time/total_timesteps        | 3670016     |
+|    gen/train/approx_kl             | 0.015633844 |
+|    gen/train/clip_fraction         | 0.215       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.88       |
+|    gen/train/explained_variance    | 0.986       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.179       |
+|    gen/train/n_updates             | 270         |
+|    gen/train/policy_gradient_loss  | -0.0108     |
+|    gen/train/std                   | 0.764       |
+|    gen/train/value_loss            | 0.619       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 271         |
+|    gen/time/fps                    | 3218        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 40          |
+|    gen/time/total_timesteps        | 3801088     |
+|    gen/train/approx_kl             | 0.015192695 |
+|    gen/train/clip_fraction         | 0.216       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.83       |
+|    gen/train/explained_variance    | 0.981       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.185       |
+|    gen/train/n_updates             | 280         |
+|    gen/train/policy_gradient_loss  | -0.0107     |
+|    gen/train/std                   | 0.757       |
+|    gen/train/value_loss            | 0.547       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 253         |
+|    gen/time/fps                    | 3862        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 3932160     |
+|    gen/train/approx_kl             | 0.016604874 |
+|    gen/train/clip_fraction         | 0.235       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.79       |
+|    gen/train/explained_variance    | 0.985       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.292       |
+|    gen/train/n_updates             | 290         |
+|    gen/train/policy_gradient_loss  | -0.0125     |
+|    gen/train/std                   | 0.753       |
+|    gen/train/value_loss            | 0.47        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 216         |
+|    gen/time/fps                    | 3828        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 4063232     |
+|    gen/train/approx_kl             | 0.016528565 |
+|    gen/train/clip_fraction         | 0.233       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.77       |
+|    gen/train/explained_variance    | 0.983       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.153       |
+|    gen/train/n_updates             | 300         |
+|    gen/train/policy_gradient_loss  | -0.0122     |
+|    gen/train/std                   | 0.75        |
+|    gen/train/value_loss            | 0.44        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 169         |
+|    gen/time/fps                    | 3893        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 4194304     |
+|    gen/train/approx_kl             | 0.017017327 |
+|    gen/train/clip_fraction         | 0.233       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.77       |
+|    gen/train/explained_variance    | 0.98        |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.111       |
+|    gen/train/n_updates             | 310         |
+|    gen/train/policy_gradient_loss  | -0.0127     |
+|    gen/train/std                   | 0.749       |
+|    gen/train/value_loss            | 0.484       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 155         |
+|    gen/time/fps                    | 3891        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 4325376     |
+|    gen/train/approx_kl             | 0.017690703 |
+|    gen/train/clip_fraction         | 0.241       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.76       |
+|    gen/train/explained_variance    | 0.94        |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.331       |
+|    gen/train/n_updates             | 320         |
+|    gen/train/policy_gradient_loss  | -0.0155     |
+|    gen/train/std                   | 0.747       |
+|    gen/train/value_loss            | 0.714       |
+----------------------------------------------------
+---------------------------------------------------
+| raw/                               |            |
+|    gen/rollout/ep_rew_wrapped_mean | 152        |
+|    gen/time/fps                    | 3812       |
+|    gen/time/iterations             | 1          |
+|    gen/time/time_elapsed           | 34         |
+|    gen/time/total_timesteps        | 4456448    |
+|    gen/train/approx_kl             | 0.01916688 |
+|    gen/train/clip_fraction         | 0.259      |
+|    gen/train/clip_range            | 0.2        |
+|    gen/train/entropy_loss          | -6.75      |
+|    gen/train/explained_variance    | 0.924      |
+|    gen/train/learning_rate         | 0.0003     |
+|    gen/train/loss                  | 0.446      |
+|    gen/train/n_updates             | 330        |
+|    gen/train/policy_gradient_loss  | -0.0176    |
+|    gen/train/std                   | 0.744      |
+|    gen/train/value_loss            | 0.899      |
+---------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 150         |
+|    gen/time/fps                    | 3834        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 4587520     |
+|    gen/train/approx_kl             | 0.018204793 |
+|    gen/train/clip_fraction         | 0.253       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.71       |
+|    gen/train/explained_variance    | 0.919       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.433       |
+|    gen/train/n_updates             | 340         |
+|    gen/train/policy_gradient_loss  | -0.0137     |
+|    gen/train/std                   | 0.741       |
+|    gen/train/value_loss            | 0.671       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 133         |
+|    gen/time/fps                    | 3823        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 34          |
+|    gen/time/total_timesteps        | 4718592     |
+|    gen/train/approx_kl             | 0.015107367 |
+|    gen/train/clip_fraction         | 0.206       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.66       |
+|    gen/train/explained_variance    | 0.925       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.212       |
+|    gen/train/n_updates             | 350         |
+|    gen/train/policy_gradient_loss  | -0.00637    |
+|    gen/train/std                   | 0.736       |
+|    gen/train/value_loss            | 0.398       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 115         |
+|    gen/time/fps                    | 3897        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 4849664     |
+|    gen/train/approx_kl             | 0.013992216 |
+|    gen/train/clip_fraction         | 0.191       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.64       |
+|    gen/train/explained_variance    | 0.627       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.0801      |
+|    gen/train/n_updates             | 360         |
+|    gen/train/policy_gradient_loss  | -0.00377    |
+|    gen/train/std                   | 0.734       |
+|    gen/train/value_loss            | 0.334       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 102         |
+|    gen/time/fps                    | 3893        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 4980736     |
+|    gen/train/approx_kl             | 0.013816864 |
+|    gen/train/clip_fraction         | 0.184       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.61       |
+|    gen/train/explained_variance    | 0.651       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.109       |
+|    gen/train/n_updates             | 370         |
+|    gen/train/policy_gradient_loss  | -0.00399    |
+|    gen/train/std                   | 0.729       |
+|    gen/train/value_loss            | 0.361       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 98.7        |
+|    gen/time/fps                    | 3858        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 5111808     |
+|    gen/train/approx_kl             | 0.014005491 |
+|    gen/train/clip_fraction         | 0.186       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.59       |
+|    gen/train/explained_variance    | 0.789       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.14        |
+|    gen/train/n_updates             | 380         |
+|    gen/train/policy_gradient_loss  | -0.00312    |
+|    gen/train/std                   | 0.727       |
+|    gen/train/value_loss            | 0.45        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 101         |
+|    gen/time/fps                    | 3896        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 5242880     |
+|    gen/train/approx_kl             | 0.014553415 |
+|    gen/train/clip_fraction         | 0.191       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.56       |
+|    gen/train/explained_variance    | 0.873       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.292       |
+|    gen/train/n_updates             | 390         |
+|    gen/train/policy_gradient_loss  | -0.00328    |
+|    gen/train/std                   | 0.722       |
+|    gen/train/value_loss            | 0.529       |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 104         |
+|    gen/time/fps                    | 3923        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 5373952     |
+|    gen/train/approx_kl             | 0.015394758 |
+|    gen/train/clip_fraction         | 0.205       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.54       |
+|    gen/train/explained_variance    | 0.917       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.391       |
+|    gen/train/n_updates             | 400         |
+|    gen/train/policy_gradient_loss  | -0.00411    |
+|    gen/train/std                   | 0.721       |
+|    gen/train/value_loss            | 0.728       |
+----------------------------------------------------
+---------------------------------------------------
+| raw/                               |            |
+|    gen/rollout/ep_rew_wrapped_mean | 110        |
+|    gen/time/fps                    | 3863       |
+|    gen/time/iterations             | 1          |
+|    gen/time/time_elapsed           | 33         |
+|    gen/time/total_timesteps        | 5505024    |
+|    gen/train/approx_kl             | 0.01659327 |
+|    gen/train/clip_fraction         | 0.214      |
+|    gen/train/clip_range            | 0.2        |
+|    gen/train/entropy_loss          | -6.51      |
+|    gen/train/explained_variance    | 0.94       |
+|    gen/train/learning_rate         | 0.0003     |
+|    gen/train/loss                  | 0.38       |
+|    gen/train/n_updates             | 410        |
+|    gen/train/policy_gradient_loss  | -0.00474   |
+|    gen/train/std                   | 0.719      |
+|    gen/train/value_loss            | 0.966      |
+---------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 104         |
+|    gen/time/fps                    | 3889        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 5636096     |
+|    gen/train/approx_kl             | 0.017468076 |
+|    gen/train/clip_fraction         | 0.232       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.52       |
+|    gen/train/explained_variance    | 0.964       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.858       |
+|    gen/train/n_updates             | 420         |
+|    gen/train/policy_gradient_loss  | -0.00667    |
+|    gen/train/std                   | 0.719       |
+|    gen/train/value_loss            | 1           |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 94.6        |
+|    gen/time/fps                    | 3889        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 5767168     |
+|    gen/train/approx_kl             | 0.018733937 |
+|    gen/train/clip_fraction         | 0.245       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.53       |
+|    gen/train/explained_variance    | 0.976       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.716       |
+|    gen/train/n_updates             | 430         |
+|    gen/train/policy_gradient_loss  | -0.00945    |
+|    gen/train/std                   | 0.718       |
+|    gen/train/value_loss            | 1.06        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 80.4        |
+|    gen/time/fps                    | 3892        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 5898240     |
+|    gen/train/approx_kl             | 0.017639387 |
+|    gen/train/clip_fraction         | 0.23        |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.52       |
+|    gen/train/explained_variance    | 0.958       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.467       |
+|    gen/train/n_updates             | 440         |
+|    gen/train/policy_gradient_loss  | -0.00701    |
+|    gen/train/std                   | 0.721       |
+|    gen/train/value_loss            | 1.19        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 64.3        |
+|    gen/time/fps                    | 3901        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 6029312     |
+|    gen/train/approx_kl             | 0.016789285 |
+|    gen/train/clip_fraction         | 0.222       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.54       |
+|    gen/train/explained_variance    | 0.907       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.474       |
+|    gen/train/n_updates             | 450         |
+|    gen/train/policy_gradient_loss  | -0.00593    |
+|    gen/train/std                   | 0.721       |
+|    gen/train/value_loss            | 1.11        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 57.7        |
+|    gen/time/fps                    | 3904        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 6160384     |
+|    gen/train/approx_kl             | 0.017217133 |
+|    gen/train/clip_fraction         | 0.223       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.53       |
+|    gen/train/explained_variance    | 0.872       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.439       |
+|    gen/train/n_updates             | 460         |
+|    gen/train/policy_gradient_loss  | -0.00595    |
+|    gen/train/std                   | 0.72        |
+|    gen/train/value_loss            | 1.18        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 68.8        |
+|    gen/time/fps                    | 3921        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 6291456     |
+|    gen/train/approx_kl             | 0.017723214 |
+|    gen/train/clip_fraction         | 0.227       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.52       |
+|    gen/train/explained_variance    | 0.832       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.773       |
+|    gen/train/n_updates             | 470         |
+|    gen/train/policy_gradient_loss  | -0.00638    |
+|    gen/train/std                   | 0.719       |
+|    gen/train/value_loss            | 1.49        |
+----------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 90.9        |
+|    gen/time/fps                    | 3949        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 33          |
+|    gen/time/total_timesteps        | 6422528     |
+|    gen/train/approx_kl             | 0.017820515 |
+|    gen/train/clip_fraction         | 0.233       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.5        |
+|    gen/train/explained_variance    | 0.798       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 0.733       |
+|    gen/train/n_updates             | 480         |
+|    gen/train/policy_gradient_loss  | -0.00664    |
+|    gen/train/std                   | 0.716       |
+|    gen/train/value_loss            | 2.18        |
+----------------------------------------------------
+---------------------------------------------------
+| raw/                               |            |
+|    gen/rollout/ep_rew_wrapped_mean | 118        |
+|    gen/time/fps                    | 3975       |
+|    gen/time/iterations             | 1          |
+|    gen/time/time_elapsed           | 32         |
+|    gen/time/total_timesteps        | 6553600    |
+|    gen/train/approx_kl             | 0.01727058 |
+|    gen/train/clip_fraction         | 0.225      |
+|    gen/train/clip_range            | 0.2        |
+|    gen/train/entropy_loss          | -6.47      |
+|    gen/train/explained_variance    | 0.792      |
+|    gen/train/learning_rate         | 0.0003     |
+|    gen/train/loss                  | 2.18       |
+|    gen/train/n_updates             | 490        |
+|    gen/train/policy_gradient_loss  | -0.00526   |
+|    gen/train/std                   | 0.713      |
+|    gen/train/value_loss            | 3.55       |
+---------------------------------------------------
+---------------------------------------------------
+| raw/                               |            |
+|    gen/rollout/ep_rew_wrapped_mean | 140        |
+|    gen/time/fps                    | 4000       |
+|    gen/time/iterations             | 1          |
+|    gen/time/time_elapsed           | 32         |
+|    gen/time/total_timesteps        | 6684672    |
+|    gen/train/approx_kl             | 0.01691447 |
+|    gen/train/clip_fraction         | 0.222      |
+|    gen/train/clip_range            | 0.2        |
+|    gen/train/entropy_loss          | -6.44      |
+|    gen/train/explained_variance    | 0.792      |
+|    gen/train/learning_rate         | 0.0003     |
+|    gen/train/loss                  | 1.13       |
+|    gen/train/n_updates             | 500        |
+|    gen/train/policy_gradient_loss  | -0.00496   |
+|    gen/train/std                   | 0.71       |
+|    gen/train/value_loss            | 5.19       |
+---------------------------------------------------
+----------------------------------------------------
+| raw/                               |             |
+|    gen/rollout/ep_rew_wrapped_mean | 158         |
+|    gen/time/fps                    | 3980        |
+|    gen/time/iterations             | 1           |
+|    gen/time/time_elapsed           | 32          |
+|    gen/time/total_timesteps        | 6815744     |
+|    gen/train/approx_kl             | 0.017003143 |
+|    gen/train/clip_fraction         | 0.223       |
+|    gen/train/clip_range            | 0.2         |
+|    gen/train/entropy_loss          | -6.41       |
+|    gen/train/explained_variance    | 0.827       |
+|    gen/train/learning_rate         | 0.0003      |
+|    gen/train/loss                  | 2.73        |
+|    gen/train/n_updates             | 510         |
+|    gen/train/policy_gradient_loss  | -0.00427    |
+|    gen/train/std                   | 0.704       |
+|    gen/train/value_loss            | 6.84        |
+----------------------------------------------------

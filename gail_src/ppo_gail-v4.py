@@ -63,7 +63,7 @@ learner = PPO(
     env=venv,
     verbose=1,
     tensorboard_log=\
-        "/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_mimic_ppo_gail/"
+        "/Users/kang/GitHub/GAIL-Fail/tensorboard/ppo_gail_14_Sep/"
     )
 reward_net = BasicRewardNet(
     venv.observation_space, venv.action_space, normalize_input_layer=RunningNorm
