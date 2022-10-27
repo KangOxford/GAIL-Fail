@@ -24,12 +24,12 @@ if generating_experts:
     expert = SAC(policy="MlpPolicy", 
                   env = env, 
                   verbose=1,
-                  tensorboard_log="/home/kang/GAIL-Fail/tensorboard/expert_sac_robots/",
-                  device = "cuda")
-    expert.learn(1e8,tb_log_name="sac_robots_cuda_run") 
+                  tensorboard_log="/home/scat9001/GAIL-Fail/tensorboard/expert_sac_robots/",
+                  device = "cpu")
+    expert.learn(1e8,tb_log_name="sac_arc") 
     expert.save("a","expert_sac_robots_v6")
 else: 
-    expert = SAC.load("/home/kang/GAIL-Fail/experts/sac_seal_expert_1.zip")
+    expert = SAC.load("/home/scat9001/GAIL-Fail/experts/sac_seal_expert_1.zip")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
@@ -64,7 +64,7 @@ learner = PPO(
     env=venv,
     verbose=1,
     tensorboard_log=\
-        "/Users/kang/GitHub/GAIL-Fail/tensorboard/debug_mimic_ppo_gail/"
+        "/Users/scat9001/GitHub/GAIL-Fail/tensorboard/debug_mimic_ppo_gail/"
     )
 reward_net = BasicRewardNet(
     venv.observation_space, venv.action_space, normalize_input_layer=RunningNorm
