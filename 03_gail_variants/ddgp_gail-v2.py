@@ -44,7 +44,6 @@ rollouts = rollout.rollout(
         env_string,
         n_envs=5,
         post_wrappers=[lambda env, _: RolloutInfoWrapper(env)],
-        rng=rng,
     ),
     rollout.make_sample_until(min_timesteps=None, min_episodes=60),
     rng=rng,
@@ -64,7 +63,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 import gym
 
 
-venv = make_vec_env(env_string, n_envs=1, rng=rng)
+venv = make_vec_env(env_string, n_envs=1)
 
 # %% define the learner
 learner = DDPG(
@@ -79,7 +78,8 @@ reward_net = BasicRewardNet(
 # %% costum logger 
 
 from stable_baselines3.common.logger import configure
-tmp_path = "/home/kang/GAIL-Fail/tb_ddpg_gail_stats/"
+tmp_path = "/home/kang/GAIL-Fail/tb_ddpg_gail_robots/"
+# tmp_path = "/home/kang/GAIL-Fail/tb_ddpg_gail_stats/"
 new_logger = configure(tmp_path, ["stdout", "csv", "tensorboard"])
 
 
@@ -88,7 +88,7 @@ new_logger = HierarchicalLogger(new_logger, ["stdout", "log","csv"])
 
 # %% define the GAIL
 gail_trainer = GAIL(
-    demonstrations=transitions,
+    demonstrations=rollouts,
     demo_batch_size=1024,
     gen_replay_buffer_capacity=2048,
     n_disc_updates_per_round=4,
@@ -97,39 +97,36 @@ gail_trainer = GAIL(
     reward_net=reward_net,
     custom_logger = new_logger,
     log_dir = tmp_path,
-    callbacks = evaluate_policy(
-    learner, venv, 10, return_episode_rewards=True
-)
-)
-
-# %% traning the GAIL 1/2
-# learner_rewards_before_training, _ = evaluate_policy(
+#     callbacks = evaluate_policy(
 #     learner, venv, 10, return_episode_rewards=True
 # )
-
-# learner_rewards_before_training, _ = evaluate_policy(
-#     learner, venv, 100, return_episode_rewards=True
-# )
-
+)
+# %%
+learner_rewards_before_training, _ = evaluate_policy(
+    learner, venv, 10, return_episode_rewards=True
+)
+print(">>> learner_rewards_before_training",learner_rewards_before_training)
+print(">>> np.mean(learner_rewards_before_training) ",np.mean(learner_rewards_before_training))
 # %% training the GAIL 2/2
-gail_trainer.train(int(1e2))  # Note: set to 300000 for better results
+gail_trainer.train(int(1e3))  # Note: set to 300000 for better results
 
 learner_rewards_after_training, _ = evaluate_policy(
-    learner, venv, 100, return_episode_rewards=True
+    learner, venv, 10, return_episode_rewards=True
 )
-
+print(">>> learner_rewards_after_training",learner_rewards_after_training)
+print(">>> np.mean(learner_rewards_after_training) ",np.mean(learner_rewards_after_training))
 # %% When we look at the histograms of rewards before and after learning, 
 # we can see that the learner is not perfect yet, but it made some progress at least.
 # If not, just re-run the above cell.
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
-# print("np.mean(learner_rewards_before_training) ",np.mean(learner_rewards_before_training))
-print("np.mean(learner_rewards_after_training) ",np.mean(learner_rewards_after_training))
+# # print("np.mean(learner_rewards_before_training) ",np.mean(learner_rewards_before_training))
+# print("np.mean(learner_rewards_after_training) ",np.mean(learner_rewards_after_training))
 
-plt.hist(
-    [learner_rewards_before_training, learner_rewards_after_training],
-    label=["untrained", "trained"],
-)
-plt.legend()
-plt.show()
+# plt.hist(
+#     [learner_rewards_before_training, learner_rewards_after_training],
+#     label=["untrained", "trained"],
+# )
+# plt.legend()
+# plt.show()
