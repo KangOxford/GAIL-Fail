@@ -1,0 +1,300 @@
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 791      |
+|    gen/time/episodes               | 4        |
+|    gen/time/fps                    | 573      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 4000     |
+|    gen/train/actor_loss            | -17.6    |
+|    gen/train/critic_loss           | 0.137    |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 3000     |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 760      |
+|    gen/time/episodes               | 8        |
+|    gen/time/fps                    | 574      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 8000     |
+|    gen/train/actor_loss            | -66.3    |
+|    gen/train/critic_loss           | 3.36     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 7000     |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 714      |
+|    gen/time/episodes               | 12       |
+|    gen/time/fps                    | 596      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 12000    |
+|    gen/train/actor_loss            | -108     |
+|    gen/train/critic_loss           | 4.84     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 11000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 629      |
+|    gen/time/episodes               | 16       |
+|    gen/time/fps                    | 584      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 16000    |
+|    gen/train/actor_loss            | -189     |
+|    gen/train/critic_loss           | 12       |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 15000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 539      |
+|    gen/time/episodes               | 20       |
+|    gen/time/fps                    | 587      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 20000    |
+|    gen/train/actor_loss            | -246     |
+|    gen/train/critic_loss           | 11.4     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 19000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 457      |
+|    gen/time/episodes               | 24       |
+|    gen/time/fps                    | 601      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 24000    |
+|    gen/train/actor_loss            | -279     |
+|    gen/train/critic_loss           | 12.7     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 23000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 403      |
+|    gen/time/episodes               | 28       |
+|    gen/time/fps                    | 597      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 28000    |
+|    gen/train/actor_loss            | -365     |
+|    gen/train/critic_loss           | 28.7     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 27000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 354      |
+|    gen/time/episodes               | 32       |
+|    gen/time/fps                    | 607      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 32000    |
+|    gen/train/actor_loss            | -360     |
+|    gen/train/critic_loss           | 19.7     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 31000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 315      |
+|    gen/time/episodes               | 36       |
+|    gen/time/fps                    | 594      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 36000    |
+|    gen/train/actor_loss            | -326     |
+|    gen/train/critic_loss           | 12.5     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 35000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 284      |
+|    gen/time/episodes               | 40       |
+|    gen/time/fps                    | 592      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 40000    |
+|    gen/train/actor_loss            | -305     |
+|    gen/train/critic_loss           | 10.3     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 39000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 259      |
+|    gen/time/episodes               | 44       |
+|    gen/time/fps                    | 589      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 44000    |
+|    gen/train/actor_loss            | -274     |
+|    gen/train/critic_loss           | 8.16     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 43000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 237      |
+|    gen/time/episodes               | 48       |
+|    gen/time/fps                    | 595      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 48000    |
+|    gen/train/actor_loss            | -246     |
+|    gen/train/critic_loss           | 5.3      |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 47000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 220      |
+|    gen/time/episodes               | 52       |
+|    gen/time/fps                    | 577      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 52000    |
+|    gen/train/actor_loss            | -221     |
+|    gen/train/critic_loss           | 4.76     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 51000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 205      |
+|    gen/time/episodes               | 56       |
+|    gen/time/fps                    | 574      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 56000    |
+|    gen/train/actor_loss            | -199     |
+|    gen/train/critic_loss           | 4.15     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 55000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 192      |
+|    gen/time/episodes               | 60       |
+|    gen/time/fps                    | 556      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 60000    |
+|    gen/train/actor_loss            | -177     |
+|    gen/train/critic_loss           | 3.6      |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 59000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 180      |
+|    gen/time/episodes               | 64       |
+|    gen/time/fps                    | 559      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 64000    |
+|    gen/train/actor_loss            | -160     |
+|    gen/train/critic_loss           | 3.05     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 63000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 170      |
+|    gen/time/episodes               | 68       |
+|    gen/time/fps                    | 575      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 68000    |
+|    gen/train/actor_loss            | -145     |
+|    gen/train/critic_loss           | 2.79     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 67000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 160      |
+|    gen/time/episodes               | 72       |
+|    gen/time/fps                    | 571      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 72000    |
+|    gen/train/actor_loss            | -132     |
+|    gen/train/critic_loss           | 2.47     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 71000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 152      |
+|    gen/time/episodes               | 76       |
+|    gen/time/fps                    | 573      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 76000    |
+|    gen/train/actor_loss            | -125     |
+|    gen/train/critic_loss           | 3.77     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 75000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 220      |
+|    gen/time/episodes               | 80       |
+|    gen/time/fps                    | 575      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 80000    |
+|    gen/train/actor_loss            | -146     |
+|    gen/train/critic_loss           | 10.6     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 79000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 216      |
+|    gen/time/episodes               | 84       |
+|    gen/time/fps                    | 576      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 84000    |
+|    gen/train/actor_loss            | -154     |
+|    gen/train/critic_loss           | 7.3      |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 83000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 211      |
+|    gen/time/episodes               | 88       |
+|    gen/time/fps                    | 553      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 88000    |
+|    gen/train/actor_loss            | -155     |
+|    gen/train/critic_loss           | 8.51     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 87000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 207      |
+|    gen/time/episodes               | 92       |
+|    gen/time/fps                    | 574      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 92000    |
+|    gen/train/actor_loss            | -171     |
+|    gen/train/critic_loss           | 12       |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 91000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 211      |
+|    gen/time/episodes               | 96       |
+|    gen/time/fps                    | 555      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 96000    |
+|    gen/train/actor_loss            | -177     |
+|    gen/train/critic_loss           | 11.3     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 95000    |
+-------------------------------------------------
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_rew_wrapped_mean | 204      |
+|    gen/time/episodes               | 100      |
+|    gen/time/fps                    | 579      |
+|    gen/time/time_elapsed           | 1        |
+|    gen/time/total_timesteps        | 100000   |
+|    gen/train/actor_loss            | -179     |
+|    gen/train/critic_loss           | 11.1     |
+|    gen/train/learning_rate         | 0.001    |
+|    gen/train/n_updates             | 99000    |
+-------------------------------------------------
