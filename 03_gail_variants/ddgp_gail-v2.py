@@ -31,17 +31,24 @@ expert = SAC.load("/home/kang/GAIL-Fail/02_generated_experts/expert_sac_robots_c
 print(">>> Load pretrained experts")
 
 # %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
-rng = np.random.default_rng(0)
-print("Sampling expert transitions.")
+from imitation.data import rollout
+from imitation.data.wrappers import RolloutInfoWrapper
+from imitation.util.util import make_vec_env
+from stable_baselines3.common.vec_env import DummyVecEnv
+import numpy as np
+
+rng = np.random.default_rng()
 rollouts = rollout.rollout(
     expert,
-    DummyVecEnv([lambda: RolloutInfoWrapper(env)]),
-    rollout.make_sample_until(min_timesteps=None, min_episodes=50),
+    make_vec_env(
+        env_string,
+        n_envs=5,
+        post_wrappers=[lambda env, _: RolloutInfoWrapper(env)],
+        rng=rng,
+    ),
+    rollout.make_sample_until(min_timesteps=None, min_episodes=60),
     rng=rng,
 )
-transitions = rollout.flatten_trajectories(rollouts)
-
-
 
 # %% Now we are ready to set up our GAIL trainer.
 # Note, that the `reward_net` is actually the network of the discriminator.
@@ -50,16 +57,14 @@ transitions = rollout.flatten_trajectories(rollouts)
 from imitation.algorithms.adversarial.gail import GAIL
 from imitation.rewards.reward_nets import BasicRewardNet
 from imitation.util.networks import RunningNorm
+from imitation.util.util import make_vec_env
 from stable_baselines3 import PPO
 from stable_baselines3.common.evaluation import evaluate_policy
-from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
-
+from stable_baselines3.common.vec_env import DummyVecEnv
 import gym
-import seals
 
-venv = DummyVecEnv([lambda: gym.make(env_string)] * 1) ## version 3
-# venv = gym.make(env_string) ## version 2
-# venv = DummyVecEnv([lambda: gym.make(env_string)] * 8) ## version 1
+
+venv = make_vec_env(env_string, n_envs=1, rng=rng)
 
 # %% define the learner
 learner = DDPG(
