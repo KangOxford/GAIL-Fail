@@ -63,7 +63,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 import gym
 
 
-venv = make_vec_env(env_string, n_envs=1)
+venv = make_vec_env(env_string, n_envs=8, rng= rng)
 
 #  define the learner
 from stable_baselines3.ppo import MlpPolicy
@@ -107,7 +107,7 @@ print(">>> np.mean(learner_rewards_before_training) ",np.mean(learner_rewards_be
 
 for i in range(int(1e6)):
     print("="*20 + 'Epoch'+str(i)+' '+'='*20)
-    gail_trainer.train(int(3e5))  # Note: set to 300000 for better results
+    gail_trainer.train(20000)  # Note: set to 300000 for better results
     learner_rewards_after_training, _ = evaluate_policy(
         learner, venv, 10, return_episode_rewards=True
     )
