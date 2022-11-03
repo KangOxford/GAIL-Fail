@@ -1,0 +1,2 @@
+raw/gen/rollout/ep_len_mean,raw/gen/time/episodes,raw/gen/rollout/ep_rew_wrapped_mean,raw/gen/time/time_elapsed,raw/gen/train/critic_loss,raw/gen/train/learning_rate,raw/gen/train/n_updates,raw/gen/train/ent_coef,raw/gen/rollout/ep_rew_mean,raw/gen/time/total_timesteps,raw/gen/train/actor_loss,raw/gen/train/ent_coef_loss,raw/gen/time/fps
+1000.0,4,15.425398509438152,0,0.8322479724884033,0.0003,3899,0.31316840648651123,-168.98583075,4000,-37.593238830566406,-10.871952056884766,477

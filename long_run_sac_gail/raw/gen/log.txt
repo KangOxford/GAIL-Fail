@@ -1,0 +1,16 @@
+-------------------------------------------------
+| raw/                               |          |
+|    gen/rollout/ep_len_mean         | 1e+03    |
+|    gen/rollout/ep_rew_mean         | -169     |
+|    gen/rollout/ep_rew_wrapped_mean | 15.4     |
+|    gen/time/episodes               | 4        |
+|    gen/time/fps                    | 477      |
+|    gen/time/time_elapsed           | 0        |
+|    gen/time/total_timesteps        | 4000     |
+|    gen/train/actor_loss            | -37.6    |
+|    gen/train/critic_loss           | 0.832    |
+|    gen/train/ent_coef              | 0.313    |
+|    gen/train/ent_coef_loss         | -10.9    |
+|    gen/train/learning_rate         | 0.0003   |
+|    gen/train/n_updates             | 3899     |
+-------------------------------------------------

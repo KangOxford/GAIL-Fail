@@ -25,7 +25,7 @@ action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n
 expert = SAC.load("/home/kang/GAIL-Fail/experts/linux_generated/1662757477/expert_sac_robots_cuda-v8.zip")
 print(">>> Load pretrained experts")
 
-# %% We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
+#  We generate some expert trajectories, that the discriminator needs to distinguish from the learner's trajectories.
 from imitation.data import rollout
 from imitation.data.wrappers import RolloutInfoWrapper
 from stable_baselines3.common.vec_env import DummyVecEnv
@@ -36,7 +36,7 @@ rollouts = rollout.rollout(
     rollout.make_sample_until(min_timesteps=None, min_episodes=100),
 )
 
-# %% Now we are ready to set up our GAIL trainer.
+#  Now we are ready to set up our GAIL trainer.
 # Note, that the `reward_net` is actually the network of the discriminator.
 # We evaluate the learner before and after training so we can see if it made any progress.
 # firstly build the env
@@ -54,7 +54,7 @@ venv = DummyVecEnv([lambda: gym.make(env_string)] * 1) ## version 3
 # venv = gym.make(env_string) ## version 2
 # venv = DummyVecEnv([lambda: gym.make(env_string)] * 8) ## version 1
 
-# %% define the learner
+#  define the learner
 learner = DDPG(
     policy="MlpPolicy",
     env=venv,
